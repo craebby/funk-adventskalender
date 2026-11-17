@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funk-Adventskalender</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+  <canvas id="schnee" aria-hidden="true"></canvas>
+  <div class="huelle">
+    <nav class="leiste">
+      <a class="knopf" href="index.html">🎄 Zum Kalender</a>
+      <a class="knopf" href="tag.html?s=vorbereitung">🚀 Bevor es losgeht</a>
+      <a class="knopf" href="tag.html?s=einkauf">🛒 Einkaufsliste</a>
+      <a class="knopf" href="tag.html?s=steckplan">🔌 Steckplan</a>
+      <button class="knopf" id="spoiler" type="button">🔒 Spoiler aus</button>
+    </nav>
+    <article class="blatt" id="blatt"><p>Lädt …</p></article>
+    <nav class="navi" id="navi"></nav>
+    <footer>
+      <a href="https://github.com/craebby/funk-adventskalender">Alles auf GitHub</a> · Fehler gefunden oder eine
+      Idee? Gern als <a href="https://github.com/craebby/funk-adventskalender/issues">Issue</a>.
+    </footer>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

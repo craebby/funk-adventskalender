@@ -12,6 +12,19 @@ beim Lichtschalten, Ultraschall, Funksignale, die Atomuhr. Der Kalender macht da
 **Stand der Prüfung:** Alle 20 Sketches kompilieren für Arduino Uno und Nano (PlatformIO, 17.11.2026). Auf echter
 Hardware getestet ist noch nichts. Heikle Tage sind mit **(prüfen)** markiert.
 
+## Die Webseite
+
+`index.html` ist der Kalender mit 24 Türchen. Jedes geht erst am jeweiligen Dezembertag auf (deutsche Zeit),
+mit dem Spoiler-Knopf auch früher. Im November läuft ein Countdown, nach Weihnachten ist alles offen.
+`tag.html` zeigt einen Tag mit Steckbild, Text und Sketch zum Kopieren. Die Texte kommen direkt aus `kalender/`,
+die Steckbilder aus `bilder/`.
+
+- **Veröffentlichen:** Repo öffentlich stellen, dann Settings → Pages → „Deploy from a branch“, Branch `main`,
+  Ordner `/ (root)`. Adresse: `https://craebby.github.io/funk-adventskalender/`
+- **Lokal ansehen:** `python3 -m http.server 8642` im Repo, dann http://localhost:8642
+- **Steckbilder neu erzeugen** (nach Änderungen am Steckplan): `python3 tools/steckbilder.py`
+- **Werbetexte:** [werbung/texte.md](werbung/texte.md)
+
 ## Der Kalender zum Lesen
 
 - [Bevor es losgeht](kalender/00_vorbereitung.md): Arduino-IDE, Hochladen, Monitor und Plotter, Sicherheit

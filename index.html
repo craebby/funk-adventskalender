@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Funk-Adventskalender: Das Unsichtbare hören</title>
+  <meta name="description" content="24 Experimente mit Arduino und Steckbrett: vom ersten LED-Blinken bis zur eigenen 433-MHz-Funkfernbedienung. Ohne Löten, ohne Vorwissen.">
+  <meta property="og:title" content="Funk-Adventskalender: Das Unsichtbare hören">
+  <meta property="og:description" content="24 Türchen, 24 Experimente: Strom in der Luft, Funken, Ultraschall, 433 MHz und die Atomuhr. Mit Arduino, ohne Löten.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <canvas id="schnee" aria-hidden="true"></canvas>
+  <div class="huelle">
+    <header class="kopf">
+      <span class="wellen" aria-hidden="true">📡</span>
+      <h1>Funk-Adventskalender</h1>
+      <div class="unter">Das Unsichtbare hören: 24 Experimente mit Arduino und Steckbrett</div>
+    </header>
+
+    <nav class="leiste">
+      <a class="knopf" href="tag.html?s=vorbereitung">🚀 Bevor es losgeht</a>
+      <a class="knopf" href="tag.html?s=einkauf">🛒 Einkaufsliste</a>
+      <a class="knopf" href="tag.html?s=steckplan">🔌 Steckplan</a>
+      <button class="knopf" id="spoiler" type="button">🔒 Spoiler aus</button>
+    </nav>
+
+    <p class="hinweis" id="stand"></p>
+
+    <main class="raster" id="raster" aria-label="Die 24 Türchen"></main>
+
+    <p class="hinweis" style="margin-top:28px">
+      Jeden Tag ein kleines Experiment, 15 bis 30 Minuten. Kein Löten, kein Vorwissen, die Programme gibt es fertig
+      zum Kopieren. Am ersten Tag leuchtet eine LED, an Heiligabend steuerst du deinen Weihnachtsbaum per Funk.
+      Unterwegs machst du hörbar, was sonst unsichtbar ist: den Strom in der Luft, Funken im Lichtschalter,
+      Ultraschall, echte 433-MHz-Signale und die Atomuhr aus Mainflingen.
+    </p>
+
+    <footer>
+      Ein Bastelprojekt aus der Funk- und Maker-Ecke · Quellen, Sketches und Steckbilder auf
+      <a href="https://github.com/craebby/funk-adventskalender">GitHub</a> · Inspiriert vom
+      <a href="https://frifle.github.io/adventskalender/">Elektronik-Adventskalender von frifle</a> und den
+      Kalendern von <a href="https://www.elektronik-labor.de/Lernpakete/Lernpakete.html#advent">Burkhard Kainka</a>.
+    </footer>
+  </div>
+  <div id="meldung" role="status" aria-live="polite"></div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

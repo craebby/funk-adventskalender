@@ -35,13 +35,20 @@ Das Steckbrett wird einmal umgebaut. Der Nano kommt hinein, der Uno wird die Fer
 **Nano:** in die Reihen 1 bis 15, quer über den Graben, USB-Buchse nach oben (Reihe 1). Die Stiftreihen stecken
 in Spalte d und h. Links bleiben a–c frei, rechts i–j. **(prüfen: je nach Nano auch c und g)**
 
-| Was | Wo | Kabel zum Nano (Pin steht auf dem Nano) |
+Dann liegen die Pins so (der Aufdruck auf dem Nano gilt, falls deiner anders ist):
+
+| Reihe | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| links (d) | D13 | 3V3 | AREF | A0 | **A1** | A2 | A3 | A4 | A5 | A6 | A7 | **5V** | RST | **GND** | VIN |
+| rechts (h) | D12 | D11 | D10 | **D9** | D8 | **D7** | **D6** | **D5** | D4 | D3 | **D2** | GND | RST | RX0 | TX1 |
+
+| Was | Wo | Kabel |
 |---|---|---|
-| Schienen | wie vorher verbunden | Reihe mit „5V“ → +, Reihe mit „GND“ → − |
-| Kerze 1, 2, 3 | 220 Ω e17–f17, e19–f19, e21–f21, LEDs langes Bein j17/j19/j21, kurzes in rechte − | D5 → a17, D6 → a19, D7 → a21 |
-| 433-MHz-Empfänger | c23 bis c26 | a23 → linke +, a24 → D2, a26 → linke − |
-| Fotowiderstand | c28 und c29, 10 kΩ von b29 in die linke − | a28 → linke +, a29 → A1 |
-| Passiver Summer | f24 (+) und f27 (−) | D9 → j24, j27 → rechte − |
+| Schienen | wie vorher verbunden | a12 (5V) → linke +, a14 (GND) → linke − |
+| Kerze 1, 2, 3 | 220 Ω e17–f17, e19–f19, e21–f21, LEDs langes Bein j17/j19/j21, kurzes in rechte − | i8 (D5) → a17, i7 (D6) → a19, i6 (D7) → a21 |
+| 433-MHz-Empfänger | c23 bis c26, Antenne bleibt dran | a23 → linke +, i11 (D2) → a24, a26 → linke − |
+| Fotowiderstand | c28 und c29, 10 kΩ von b29 in die linke − | a28 → linke +, a5 (A1) → a29 |
+| Passiver Summer | f24 (+) und f27 (−) | i4 (D9) → j24, j27 → rechte − |
 
 **Uno als Fernbedienung (ohne Steckbrett):**
 
