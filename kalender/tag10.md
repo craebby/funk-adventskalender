@@ -12,7 +12,8 @@ Bleibt wie gestern: Draht an A0, Drehknopf an A2.
 
 ## Was passiert
 
-Leg den Draht neben einen Lichtschalter und schalte. Knacks! Die rote Kerze blitzt, der Summer klickt und im
+Wie gestern: Nach dem Hochladen an die Powerbank, dann bist du beweglich. Kerze und Summer melden jeden Knacks,
+mitzählen musst du dann selbst. Leg den Draht neben einen Lichtschalter und schalte. Knacks! Die rote Kerze blitzt, der Summer klickt und im
 Monitor steht „Knacks Nr. 1“. Probier den Wasserkocher, den Staubsauger, den Föhn: Jedes Ein- und Ausschalten
 zählt.
 

@@ -10,6 +10,10 @@ Dort steht bei jeder Messung die „Stärke“.
 
 ## Experiment: Die Hitliste der Störer
 
+Für die Zahlen im Monitor muss der Uno am PC bleiben. Also kommen die Geräte zum Schreibtisch: Ladegerät,
+Laptop-Netzteil, Schreibtischlampe, Föhn lassen sich alle in die Steckdosenleiste am PC stecken. Was sich nicht
+tragen lässt, testest du mit der Powerbank wie an Tag 9: Je höher der Ton, desto stärker der Störer.
+
 Halte den Draht jeweils etwa 5 cm vor das Gerät, während es läuft, und schreib die höchste Zahl auf:
 
 | Gerät | Stärke |

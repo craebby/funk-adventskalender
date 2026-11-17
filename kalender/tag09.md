@@ -11,6 +11,12 @@ a4 → linke −, das mittlere Bein a3 → **A2**. Der Antennendraht von gestern
 
 [`tag09_kabelsucher.ino`](../sketches/tag09_kabelsucher/tag09_kabelsucher.ino)
 
+## Unterwegs ohne PC
+
+Der Sketch bleibt im Uno gespeichert, auch ohne PC. Nach dem Hochladen das USB-Kabel vom PC abziehen und an eine
+Powerbank oder ein Handy-Ladegerät stecken. Jetzt kannst du mit dem Steckbrett in der Hand durchs Zimmer gehen.
+LED und Summer zeigen dir alles, den PC brauchst du dafür nicht.
+
 ## Was passiert
 
 Führ den Draht langsam an der Wand entlang. Wo eine Stromleitung liegt, leuchtet die rote Kerze und der Summer

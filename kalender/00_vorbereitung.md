@@ -27,6 +27,12 @@ musst sie nur kopieren und hochladen.
 - **Serieller Plotter** (Werkzeuge → Serieller Plotter): Zeigt Zahlen als Kurve. Ab Tag 8 dein Oszilloskop.
 - **Bibliotheken** (ab Tag 16): Werkzeuge → Bibliotheken verwalten, den Namen eintippen, „Installieren“.
 
+## Unterwegs ohne PC
+
+Ein hochgeladener Sketch bleibt im Arduino gespeichert. Für die Tage, an denen du durchs Haus gehst (ab Tag 9),
+steckst du das USB-Kabel nach dem Hochladen einfach an eine Powerbank oder ein Handy-Ladegerät. Nur den Seriellen
+Monitor und Plotter gibt es dann nicht, LEDs und Summer funktionieren weiter.
+
 ## Sicherheit
 
 Auf deinem Steckbrett gibt es nur die 5 Volt aus dem USB-Kabel. Das ist völlig ungefährlich. Mit 230 Volt aus
