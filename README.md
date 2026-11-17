@@ -1,0 +1,187 @@
+# Funk-Adventskalender: Das Unsichtbare hören
+
+Konzept, Stand 17.11.2026.
+
+24 kleine Experimente auf dem Steckbrett, jeden Tag 15 bis 30 Minuten. Man braucht kein Vorwissen und keinen
+Lötkolben: aufbauen, Sketch kopieren, hochladen, staunen. Am ersten Tag leuchtet eine LED, am Ende schaltet eine
+selbst gebaute Funkfernbedienung den Weihnachtsbaum aus dem Nebenzimmer und schickt einen Weihnachtsgruß.
+
+Der rote Faden: Um uns herum ist ständig etwas unterwegs, das man nicht sieht. Der Brumm aus der Steckdose, Funken
+beim Lichtschalten, Ultraschall, Funksignale, die Atomuhr. Der Kalender macht das hör- und sichtbar.
+
+**Stand der Prüfung:** Alle 20 Sketches kompilieren für Arduino Uno und Nano (PlatformIO, 17.11.2026). Auf echter
+Hardware getestet ist noch nichts. Heikle Tage sind mit **(prüfen)** markiert.
+
+## Einkaufsliste
+
+Drei Dinge, zusammen etwa **43 €**. Kein Löten, keine Spezialteile.
+
+| Was | Preis | Wofür |
+|---|---|---|
+| **Miuzei Elektronik Starter Kit für Arduino R3, 203 Teile, Variante „Basic Starter Kit“** (Amazon) | 25,99 € | alles für Woche 1 und 2, der Uno wird später die Fernbedienung |
+| **dixfedy Nano-V3 mit USB-C, 2 Stück, Pins verlötet** (Amazon) | 9,99 € | der Empfänger ab Tag 18. Der zweite ist Reserve. |
+| **ARCELI 5 Stück 433 MHz RF Sender und Empfänger Link Kit** (Amazon, B07MY39VF8): 5 Paare aus Sender MX-FS-03V und Empfänger MX-05V, 433,92 MHz | 7,09 € | Woche 3 und 4. Ein Paar wird gebraucht, der Rest ist Reserve. Die Module sind baugleich zu FS1000A/XY-MK-5V. |
+
+Aus dem Haushalt: Alufolie, eine Keksdose, etwa 1,5 m Draht (Klingeldraht, Lautsprecherkabel oder einige
+Steckbrücken hintereinander), ein USB-C-Kabel vom Handy, eine Powerbank oder ein Handy-Ladegerät.
+
+Was aus dem Miuzei-Kit gebraucht wird (laut Produktbild): Uno mit USB-Kabel, Steckbrett (400 Kontakte),
+Steckbrücken und Buchse-Stecker-Kabel, LEDs, Widerstände 220 Ω und 10 kΩ, Taster, Fotowiderstand, Potentiometer,
+passiver und aktiver Summer, Ultraschall-Sensor HC-SR04. Übrig bleiben unter anderem Temperatur-Sensoren,
+Neigungsschalter, RGB-LED und 7-Segment-Anzeige, gut für eigene Ideen nach Weihnachten.
+
+**Beim Kauf achten auf:**
+- Auf dem 433-MHz-Empfänger muss auf dem kleinen Metallbauteil **433** stehen (es gibt gleich aussehende mit 315 MHz).
+- Der Nano hat einen CH340-Chip. Windows 10/11 und Linux erkennen ihn meist von selbst, sonst den CH340-Treiber
+  installieren. In der Arduino-IDE als „Arduino Nano“ auswählen, Prozessor „ATmega328P“.
+
+Preise vom 17.11.2026, sie schwanken.
+
+### Minimale Materialliste (für alle, die schon eine Bastelkiste haben)
+
+Das hier wird wirklich gebraucht, egal aus welchem Kit es stammt:
+
+| Anzahl | Teil | Ab Tag | Hinweis |
+|---|---|---|---|
+| 1 | Arduino Uno mit USB-Kabel | 1 | Jedes 5-V-Board mit ATmega328 geht, auch ein Nano |
+| 1 | Arduino Nano mit Pins und USB-Kabel | 18 | Oder ein zweiter Uno. Hauptsache zwei Boards: eines sendet, eines empfängt |
+| 1 | Steckbrett, mindestens 400 Kontakte | 1 | |
+| ca. 15 | Steckbrücken Stecker–Stecker | 1 | |
+| 3 | Steckbrücken Buchse–Stecker | 18 | Für den Sender direkt am Uno |
+| 3 | LEDs, Farbe egal | 1 | |
+| 3 | Widerstände 220 Ω | 1 | 150 bis 470 Ω gehen auch |
+| 1 | Widerstand 10 kΩ | 6 | Für den Fotowiderstand |
+| 1 | Fotowiderstand (LDR) | 6 | |
+| 1 | Taster | 4 | |
+| 1 | Potentiometer 10 kΩ | 9 | Andere Werte von 1 bis 100 kΩ gehen auch |
+| 1 | **Passiver** Summer | 5 | Ein aktiver reicht nicht für Melodien. Ein kleiner Lautsprecher mit 100 Ω in Reihe geht auch |
+| 1 | Ultraschall-Sensor HC-SR04 | 11 | |
+| 1 | 433-MHz-Sender + Empfänger (FS1000A/MX-FS-03V + XY-MK-5V/MX-05V) | 15 | Auf dem Empfänger muss 433 stehen, nicht 315 |
+| ca. 1,5 m | Draht, beliebig | 8 | 1 m Antenne für Woche 2, dazu 2 × 17,3 cm für 433 MHz |
+
+Nicht zwingend nötig: ein aktiver Summer (Tag 5, zum Vergleich hören), eine Powerbank (Tag 20, ein langes
+USB-Kabel tut es auch), Alufolie und Keksdose (Tag 19).
+
+### Nur für Ambitionierte (optional)
+
+| Teil | Preis ca. | Für |
+|---|---|---|
+| DCF77-Empfangsmodul, möglichst mit Pins | ca. 6–10 € | Tag 23: die Atomuhr selbst empfangen. Ohne Modul hört man sie über den WebSDR. |
+| SDR-Stick (z. B. RTL-SDR Blog V4) | 35–60 € | Bonus am 24.: den eigenen Sender auf dem Bildschirm sehen |
+
+## Wer macht was
+
+- **Tag 1 bis 17:** Der **Uno** sitzt neben dem Steckbrett und steuert alles.
+- **Ab Tag 18:** Der **Nano** zieht ins Steckbrett und wird der Empfänger mit Kerzen, Summer und Lichtsensor. Er
+  bleibt per USB am PC. Der **Uno** wird die Fernbedienung: Der Sender hängt an drei Buchse-Stecker-Kabeln direkt am
+  Uno, die Tasten sind Steckbrücken, die man an GND tippt. So braucht die Fernbedienung kein eigenes Steckbrett
+  und läuft an jeder Powerbank.
+
+Feste Pins, beim Uno und beim Nano gleich:
+
+| Pin | Was |
+|---|---|
+| 5, 6, 7 | LEDs (Kerzen), je mit 220 Ω |
+| 3 | Taster gegen GND |
+| 9 | Passiver Summer |
+| A0 | Antennendraht (offener Eingang) |
+| A1 | Fotowiderstand (mit 10 kΩ nach GND) |
+| A2 | Potentiometer (Empfindlichkeit) |
+| 4 und 8 | Ultraschall-Sensor (Trig und Echo) |
+| 2 | 433-MHz-Empfänger DATA |
+| 10 | 433-MHz-Sender DATA (am Uno, ab Tag 18) |
+
+## Die 24 Tage
+
+### Woche 1: Licht und Töne. Ankommen.
+
+| Tag | Experiment | Was passiert | Sketch |
+|---|---|---|---|
+| 1 | **Hallo Steckbrett** | 5V vom Uno über 220 Ω an eine LED: Sie leuchtet. Noch kein Programm, nur verstehen, wie das Steckbrett verbunden ist. | – |
+| 2 | **Die erste LED blinkt** | Erstes eigenes Programm. Mit `delay` spielen: schneller, langsamer. | `tag02_blinken` |
+| 3 | **Drei flackernde Kerzen** | Zufällige Helligkeit sieht aus wie Kerzenflammen. | `tag03_kerzen` |
+| 4 | **Licht per Knopf** | Der Taster schaltet die Kerze an und aus. | `tag04_taster` |
+| 5 | **Jingle Bells** | Der passive Summer spielt die Melodie. Dann den aktiven Summer einstecken: Der kann nur einen Ton, weil er seinen eigenen Tongeber hat. So lernt man den Unterschied. | `tag05_melodie` |
+| 6 | **Nikolaus: Das Licht-Theremin** | Hand über den Fotowiderstand: Je dunkler, desto tiefer der Ton. Mit der Handy-Taschenlampe spielen. | `tag06_lichttheremin` |
+| 7 | **Das Nachtlicht** | Wird es dunkel, gehen die Kerzen von selbst an. Das braucht das Finale wieder. Übrigens für Neugierige: Mit `uebrigens_lampenflackern` im Seriellen Plotter nachsehen, ob die LED-Lampen im Haus flackern. **(prüfen: ob der Fotowiderstand dafür schnell genug ist)** | `tag07_nachtlicht` |
+
+### Woche 2: Unsichtbare Felder
+
+| Tag | Experiment | Was passiert | Sketch |
+|---|---|---|---|
+| 8 | **Die Luft ist voller Strom** | Ein Draht an A0, sonst nichts. Im Seriellen Plotter erscheint eine Welle, sobald man die Hand nähert oder ihn an ein Netzkabel hält. Das ist das Stromnetz mit 50 Hz, ganz ohne Kontakt. Die erste Antenne des Kalenders. | `tag08_offener_eingang` |
+| 9 | **Der Kabelsucher** | Den Draht an der Wand entlangführen: Wo eine Leitung liegt, piept es. Mit dem Potentiometer stellt man die Empfindlichkeit ein. **Nur von außen suchen, nie in Steckdosen fassen.** | `tag09_kabelsucher` |
+| 10 | **Der Knacks-Detektor** | Lichtschalter, Wasserkocher, Staubsauger: Jeder Funke im Schalter ist ein winziger Funksender. Der Arduino knackt und zählt mit. Genau so orten Blitzdetektoren Gewitter. Übrigens: Auf blitzortung.org sieht man das Netz der Hobby-Blitzdetektoren live. **(prüfen: ob die Knackse zuverlässig ankommen)** | `tag10_knacksdetektor` |
+| 11 | **Das Ultraschall-Theremin** | Der Ultraschall-Sensor ruft Töne, die zu hoch für unsere Ohren sind, und lauscht auf das Echo, wie eine Fledermaus. Die Hand darüber auf und ab bewegen: Der Summer spielt dazu. | `tag11_ultraschalltheremin` |
+| 12 | **Du bist eine Antenne** | Sketch von Tag 8. Draht anfassen: Die Welle wird riesig. Zu zweit Hände halten. Barfuß gegen Hausschuhe. Draht 10 cm gegen 1 m. Was macht die Welle größer? | `tag08_offener_eingang` |
+| 13 | **Störungsjagd im Haus** | Sketch von Tag 9 mit Seriellem Monitor. Handy-Ladegerät, Laptop-Netzteil, LED-Lampe, Föhn: Wer stört am meisten? Eine Hitliste der Funkstörer im Haus. | `tag09_kabelsucher` |
+| 14 | **Zahlen per Licht** | Die LED blitzt eine Zahl, der Fotowiderstand zählt mit. An, aus, an, aus: So funktioniert ab morgen auch der Funk. **(prüfen: Tempo)** | `tag14_lichtfunk` |
+
+### Woche 3: Echter Funk auf 433 MHz
+
+| Tag | Experiment | Was passiert | Sketch |
+|---|---|---|---|
+| 15 | **So klingt Funkstille** | Den 433-MHz-Empfänger einstecken und auf den Summer schalten: Er rauscht. Der Empfänger dreht so lange auf, bis er das Rauschen hört. | `tag15_rauschen` |
+| 16 | **Wer funkt denn hier?** | Der Arduino lauscht auf 433 MHz. Wer eine Funkklingel, ein Funkthermometer oder eine alte Fernbedienung hat: drücken und den Code sehen. Wenn nichts kommt, ist auch das ein Ergebnis: Übermorgen funken wir selbst. | `tag16_funklauscher` |
+| 17 | **Eine Antenne bauen** | Zwei Drähte, je 17,3 cm: ein Viertel der Wellenlänge bei 433 MHz. Durch das Loch „ANT“ an Sender und Empfänger stecken und verdrillen. Mit dem Sketch von Tag 15 hören: Mit Antenne ändert sich das Rauschen, und ein telefonierendes Handy daneben knattert hinein. | `tag15_rauschen` |
+| 18 | **Der eigene Sender** | Umzug: Der Nano zieht ins Steckbrett und übernimmt den Empfänger. Der Uno bekommt den Sender an drei Kabeln und zwei Drahttasten. Pin-3-Draht an GND tippen: Auf dem Bildschirm des Nano steht 2412. Der erste eigene Funkspruch. | Uno: `tag18_fernbedienung`, Nano: `tag16_funklauscher` |
+| 19 | **Die Keksdose als Funkbunker** | Wie gestern. Den Uno samt Sender in Alufolie wickeln oder in eine Keksdose legen: Funkstille. Ein Faradayscher Käfig, wie im Auto oder im Aufzug. Und Holz, Wasser, die Hand? Und ohne Antenne? | wie Tag 18 |
+| 20 | **Die Weihnachtsfernbedienung** | Der Uno hängt jetzt an der Powerbank und ist frei beweglich. Der Nano schaltet die Kerzen und läutet die Glocke. Durch die Wohnung gehen: Wo reicht es noch? | Nano: `tag20_fernbedienung_empfaenger` |
+| 21 | **Die Funk-Postkarte** | Taste 2 schickt „FROHE WEIHNACHTEN!“ Buchstabe für Buchstabe, der Nano zeigt den Text. Einen eigenen Gruß in den Sketch schreiben. So reisen auch SMS und WLAN-Daten: als lauter kleine Zahlen. | Nano: `tag21_funkpostkarte` |
+
+### Woche 4: Zeit und Finale
+
+| Tag | Experiment | Was passiert | Sketch |
+|---|---|---|---|
+| 22 | **Wie falsch geht der Arduino?** | Der Arduino zählt die Zeit seit dem Start. Zur vollen Minute starten, nach ein paar Stunden mit time.is vergleichen: Er geht falsch, oft um mehrere Sekunden pro Stunde. Genau dafür gibt es Funkuhren. | `tag22_arduinouhr` |
+| 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach einer Minute die Uhrzeit. **(prüfen: Pegel des Moduls)** | optional `tag23_atomuhr_modul` |
+| 24 | **Finale: Der funkgesteuerte Weihnachtsbaum** | Taste 1 schaltet die Kerzen, Taste 2 schickt den Gruß und spielt Jingle Bells, und bei Dunkelheit gehen die Kerzen von selbst an. Bonus mit SDR-Stick: den eigenen Sender als Strich im Wasserfall sehen. | Nano: `tag24_finale` |
+
+### Zum Schluss, ein Absatz im Text am 24.
+
+„Wenn dir das Spaß gemacht hat: Funkamateure dürfen mit selbst gebauten Geräten richtig senden, auf der ganzen Welt.
+Den Einstieg bildet die Lizenzklasse N, seit 2024, mit einer Prüfung bei der Bundesnetzagentur. Frag beim
+nächsten DARC-Ortsverband nach, die meisten freuen sich über Besuch.“
+
+## Hinter den Türchen
+
+Wer den Kalender verschenken will und die Teile verteilen möchte:
+
+| Tag | Neues Teil |
+|---|---|
+| 1 | Uno, USB-Kabel, Steckbrett, Steckbrücken, rote LED, 220 Ω |
+| 3 | zwei weitere LEDs, zwei 220 Ω |
+| 4 | Taster |
+| 5 | passiver und aktiver Summer |
+| 6 | Fotowiderstand, 10 kΩ |
+| 8 | 1 m Draht |
+| 9 | Potentiometer |
+| 11 | Ultraschall-Sensor |
+| 15 | 433-MHz-Empfänger |
+| 17 | 2 × 17,3 cm Draht |
+| 18 | Nano mit USB-C-Kabel, 433-MHz-Sender, drei Buchse-Stecker-Kabel |
+| 19 | eine Keksdose, gern gefüllt |
+| 20 | (Powerbank aus dem Haushalt) |
+| 24 | ein Stück Schoki |
+
+An den übrigen Tagen wird nur umgebaut.
+
+## Rechtliches und Sicherheit
+
+- **Strom:** Auf dem Steckbrett gibt es nur 5 V vom USB, das ist ungefährlich. Mit 230 V wird nie gearbeitet.
+  Kabelsucher und Störungsjagd halten den Draht nur in die Nähe von Wänden und geschlossenen Kabeln. Nichts
+  aufschrauben, nicht in Steckdosen fassen, keine beschädigten Kabel.
+- **433 MHz:** Der Bereich 433,05–434,79 MHz ist für Funkanwendungen geringer Reichweite allgemein zugeteilt, laut
+  [mikrocontroller.net](https://www.mikrocontroller.net/articles/Allgemeinzuteilung) mit 10 mW ERP (Vfg 30/2014).
+  Die aktuelle Fassung vor der Veröffentlichung bei der Bundesnetzagentur nachlesen. Im Text: Sender mit 5 V
+  betreiben, nur auf Tastendruck senden, keine fremden Geräte anfunken.
+
+## Offene Punkte vor dem Veröffentlichen
+
+1. Das Miuzei-Kit und die Nanos einmal in der Hand haben und den Inhalt gegen die Liste prüfen.
+2. Platzprobe: Passen Nano, Empfänger, drei LEDs, Summer und Fotowiderstand zusammen auf das 400er-Steckbrett?
+   Wenn nicht, die Kerzen auf zwei reduzieren. **(prüfen)**
+3. Alles einmal auf echter Hardware aufbauen, besonders die (prüfen)-Tage 7, 10, 14 und 23.
+4. Die Funk-Postkarte (Tag 21) testen: Kommen alle Buchstaben an, oder muss der Uno langsamer funken?
+5. Fotos oder Fritzing-Bilder für jeden Tag.
+6. Texte im Plauderton schreiben, jeder Tag mit einem „Übrigens“.
