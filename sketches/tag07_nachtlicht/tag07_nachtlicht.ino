@@ -5,10 +5,11 @@
 // Im Seriellen Monitor siehst du die Helligkeit. Damit stellst du DUNKEL passend ein.
 
 const int LICHT = A1;
-const int KERZE1 = 5, KERZE2 = 6;
+const int KERZE1 = 5, KERZE2 = 6, KERZE3 = 7;
 const int DUNKEL = 300;   // unter diesem Wert ist es "dunkel"
 
 void setup() {
+  pinMode(KERZE3, OUTPUT);
   Serial.begin(115200);
 }
 
@@ -18,9 +19,11 @@ void loop() {
   if (hell < DUNKEL) {
     analogWrite(KERZE1, random(80, 256));
     analogWrite(KERZE2, random(80, 256));
+    digitalWrite(KERZE3, random(0, 4) > 0);
   } else {
     analogWrite(KERZE1, 0);
     analogWrite(KERZE2, 0);
+    digitalWrite(KERZE3, LOW);
   }
   delay(random(40, 120));
 }

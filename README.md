@@ -12,6 +12,20 @@ beim Lichtschalten, Ultraschall, Funksignale, die Atomuhr. Der Kalender macht da
 **Stand der Prüfung:** Alle 20 Sketches kompilieren für Arduino Uno und Nano (PlatformIO, 17.11.2026). Auf echter
 Hardware getestet ist noch nichts. Heikle Tage sind mit **(prüfen)** markiert.
 
+## Der Kalender zum Lesen
+
+- [Bevor es losgeht](kalender/00_vorbereitung.md): Arduino-IDE, Hochladen, Monitor und Plotter, Sicherheit
+- [Steckplan](kalender/steckplan.md): wo jedes Teil den ganzen Monat steckt
+- Die Türchen: [1](kalender/tag01.md) · [2](kalender/tag02.md) · [3](kalender/tag03.md) · [4](kalender/tag04.md) ·
+  [5](kalender/tag05.md) · [6](kalender/tag06.md) · [7](kalender/tag07.md) · [8](kalender/tag08.md) ·
+  [9](kalender/tag09.md) · [10](kalender/tag10.md) · [11](kalender/tag11.md) · [12](kalender/tag12.md) ·
+  [13](kalender/tag13.md) · [14](kalender/tag14.md) · [15](kalender/tag15.md) · [16](kalender/tag16.md) ·
+  [17](kalender/tag17.md) · [18](kalender/tag18.md) · [19](kalender/tag19.md) · [20](kalender/tag20.md) ·
+  [21](kalender/tag21.md) · [22](kalender/tag22.md) · [23](kalender/tag23.md) · [24](kalender/tag24.md)
+
+Jeder Tag hat dieselben Abschnitte: Heute neu, Aufbau, Programm, Was passiert, Probier mal, Übrigens.
+Fotos fehlen noch, sie entstehen mit den bestellten Kits.
+
 ## Einkaufsliste
 
 Drei Dinge, zusammen etwa **43 €**. Kein Löten, keine Spezialteile.
@@ -36,6 +50,17 @@ Neigungsschalter, RGB-LED und 7-Segment-Anzeige, gut für eigene Ideen nach Weih
   installieren. In der Arduino-IDE als „Arduino Nano“ auswählen, Prozessor „ATmega328P“.
 
 Preise vom 17.11.2026, sie schwanken.
+
+### Sparen
+
+- **Zu zweit bestellen:** Im Nano-Doppelpack stecken zwei Nanos, im ARCELI-Set fünf Funkpaare. Teilen sich zwei
+  Leute beides, kostet es pro Person etwa 25,99 + 5,00 + 3,55 = **ca. 35 €**. Bei fünf Leuten wird das Funkset noch
+  günstiger.
+- **Ein einzelnes 433-MHz-Paar** statt fünf gibt es ab etwa 3–4 € (eBay), das spart ca. 3 €.
+- **Einzelteile statt Kit** (Steckbrett ca. 2 €, Poti ca. 1 €, LEDs, Widerstände, Summer, Fotowiderstand, Ultraschall
+  ab ca. 2 €, z. B. bei Berrybase) kommt mit zwei Nanos auf etwa 25–30 €, aber mit vielen Einzelbestellungen und
+  Versandkosten. Für Einsteiger nicht empfohlen.
+- **Mit eigener Bastelkiste:** meist nur das Funkset, also 4–7 €.
 
 ### Minimale Materialliste (für alle, die schon eine Bastelkiste haben)
 

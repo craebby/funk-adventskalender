@@ -1,11 +1,11 @@
 // Tag 14: Zahlen per Licht schicken
-// Sender: weisse oder rote LED mit 220 Ohm an Pin 5.
-// Empfaenger: Fotowiderstand an A1 wie an Tag 6, direkt gegenueber der LED (1-2 cm).
+// Sender: Kerze 3 (gruene LED an Pin 7). Die LED vorsichtig umbiegen,
+// bis sie direkt auf den Fotowiderstand (A1) zeigt. Ein Papierroehrchen drumherum haelt Raumlicht ab.
 // Taster an Pin 3: Jeder Druck schickt eine zufaellige Zahl von 1 bis 9 als Lichtblitze.
 // Der Empfaenger zaehlt die Blitze und zeigt das Ergebnis im Seriellen Monitor.
 // So funktionieren auch Fernbedienungen und die 433-MHz-Module ab Tag 15: an, aus, an, aus.
 
-const int LED = 5;
+const int LED = 7;
 const int LICHT = A1;
 const int TASTER = 3;
 

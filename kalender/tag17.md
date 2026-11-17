@@ -1,0 +1,29 @@
+# 17. Dezember: Eine Antenne bauen
+
+**Heute neu:** zwei Drähte, je **17,3 cm**
+
+## Aufbau
+
+Zwei Stücke Draht genau 17,3 cm lang abschneiden. An beiden Enden 5 mm abisolieren (vorsichtig die Plastikhülle
+einritzen und abziehen).
+
+- **Empfänger:** Ein Draht durch das kleine Loch mit der Aufschrift **ANT**, ein paar Mal um sich selbst
+  verdrillen, damit er hält.
+- **Sender** (die kleinere, quadratische Platine, die du morgen brauchst): den zweiten Draht genauso durch sein
+  ANT-Loch.
+
+Kein Löten nötig. Gelötet hält es besser, aber verdrillt reicht.
+
+## Programm
+
+Wieder [`tag15_rauschen.ino`](../sketches/tag15_rauschen/tag15_rauschen.ino).
+
+## Was passiert
+
+Hör auf das Rauschen und schau in den Plotter, einmal ohne und einmal mit Antenne. Leg dein Handy daneben und ruf
+jemanden an oder starte ein Video: Mit Antenne knattert das Handy deutlich ins Rauschen hinein.
+
+## Übrigens
+
+Warum 17,3 cm? Eine Funkwelle bei 433 MHz ist von Berg zu Berg 69,2 cm lang. Antennen funktionieren besonders gut,
+wenn sie ein Viertel davon lang sind. Funkamateure rechnen das ständig, für jedes Band eine andere Länge.
