@@ -16,6 +16,10 @@ Heute leuchtet etwas, ganz ohne Programm. Der Uno ist erst mal nur eine Steckdos
 5. Steckbrücke von der **+**-Schiene nach **a10**.
 6. USB einstecken.
 
+> **Achtung, Farben zählen:** Auf manchen Steckbrettern liegt die rote **+**-Schiene außen, auf anderen innen,
+> manchmal sogar auf beiden Seiten verschieden. Geh immer nach der Farbe der Linie (rot = +, blau = −), nicht danach,
+> wie es auf dem Bild aussieht.
+
 ## Was passiert
 
 Die LED leuchtet. Der Strom fließt von 5V über die Brücke in Reihe 10, durch den Widerstand, durch die LED und

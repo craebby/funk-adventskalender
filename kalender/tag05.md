@@ -21,9 +21,15 @@ Jingle Bells, einmal. Für eine Zugabe den Reset-Knopf auf dem Uno drücken.
 
 ## Probier mal
 
-Steck jetzt den **aktiven** Summer an dieselbe Stelle und drück Reset. Er schnarrt nur in einer Tonhöhe. Der aktive
-hat einen eigenen Tongeber eingebaut und piept, sobald Strom fließt. Der passive ist nur eine Membran, die genau so
-schnell schwingt, wie der Arduino sie anschubst. Danach wieder den passiven einstecken, den brauchst du noch oft.
+Steck jetzt den **aktiven** Summer an dieselbe Stelle und drück Reset. Je nach Modell schnarrt er nur in einer
+Tonhöhe, oder er spielt die Melodie kratzig und mit einem Brummen darunter. Der aktive hat einen eigenen Tongeber
+eingebaut und piept, sobald Strom fließt. Der Arduino kann ihn nur schnell an- und ausschalten, darum klingt es
+schief. Der passive ist nur eine Membran, die genau so schnell schwingt, wie der Arduino sie anschubst. Danach
+wieder den passiven einstecken, den brauchst du noch oft.
+
+**Kein passiver Summer da?** Eine **Piezo-Scheibe** (die flache Messingscheibe mit zwei Drähten, oft aus alten
+Grußkarten oder Weckern) funktioniert genauso: roter Draht an f25 bzw. Pin 9, schwarzer an Minus. Sie ist etwas
+leiser. Im Notfall tut es auch der aktive Summer, dann klingt die Musik eben schräg.
 
 ## Übrigens
 

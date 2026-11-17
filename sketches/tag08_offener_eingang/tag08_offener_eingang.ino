@@ -1,20 +1,36 @@
 // Tag 8: Die Luft ist voller Strom
-// Ein Draht (ca. 30 cm) an A0, das andere Ende frei. Sonst nichts.
-// Serieller Plotter (115200 Baud). Hand naehern, Draht anfassen, an ein Netzkabel halten:
-// Die Welle, die du siehst, ist das Stromnetz mit 50 Hz.
+// Eine kurze Steckbruecke (10-20 cm) an A0, das andere Ende frei. Ein langer Draht uebersteuert!
+// Serieller Plotter (115200 Baud). Zwei Linien:
+//   Welle   = was der Draht gerade auffaengt (bei 50 Hz: 8 Punkte pro Berg)
+//   Staerke = wie gross die Welle ist. Je hoeher, desto mehr Strom in der Luft.
+// Finger von der Seite naehern, Isolierung beruehren, Spitze antippen: auf Staerke achten.
 
 const int ANTENNE = A0;
+const int ANZAHL = 20;          // Staerke ueber die letzten 20 Messungen (50 ms)
+
+int werte[ANZAHL];
+int pos = 0;
 
 void setup() {
   Serial.begin(115200);
 }
 
 void loop() {
-  int werte[200];
-  for (int i = 0; i < 200; i++) {
-    werte[i] = analogRead(ANTENNE);
-    delayMicroseconds(400);   // 200 Messungen = etwa 0,1 s = 5 Schwingungen bei 50 Hz
+  unsigned long start = micros();
+
+  werte[pos] = analogRead(ANTENNE);
+  pos = (pos + 1) % ANZAHL;
+
+  int klein = 1023, gross = 0;
+  for (int i = 0; i < ANZAHL; i++) {
+    if (werte[i] < klein) klein = werte[i];
+    if (werte[i] > gross) gross = werte[i];
   }
-  for (int i = 0; i < 200; i++) Serial.println(werte[i]);
-  delay(300);
+
+  Serial.print("Welle:");
+  Serial.print(werte[(pos + ANZAHL - 1) % ANZAHL]);
+  Serial.print(",Staerke:");
+  Serial.println(gross - klein);
+
+  while (micros() - start < 2500) { }   // 400 Messungen pro Sekunde
 }

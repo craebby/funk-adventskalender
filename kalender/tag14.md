@@ -1,6 +1,6 @@
 # 14. Dezember: Zahlen per Licht
 
-**Heute neu:** nichts. Den Antennendraht aus A0 darfst du rausziehen.
+**Heute neu:** nichts.
 
 ## Aufbau
 

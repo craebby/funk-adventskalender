@@ -104,10 +104,10 @@ Das hier wird wirklich gebraucht, egal aus welchem Kit es stammt:
 | 1 | Fotowiderstand (LDR) | 6 | |
 | 1 | Taster | 4 | |
 | 1 | Potentiometer 10 kΩ | 9 | Andere Werte von 1 bis 100 kΩ gehen auch |
-| 1 | **Passiver** Summer | 5 | Ein aktiver reicht nicht für Melodien. Ein kleiner Lautsprecher mit 100 Ω in Reihe geht auch |
+| 1 | **Passiver** Summer | 5 | Ein aktiver spielt Melodien nur schräg. Eine Piezo-Scheibe oder ein kleiner Lautsprecher mit 100 Ω in Reihe gehen auch |
 | 1 | Ultraschall-Sensor HC-SR04 | 11 | |
 | 1 | 433-MHz-Sender + Empfänger (FS1000A/MX-FS-03V + XY-MK-5V/MX-05V) | 15 | Auf dem Empfänger muss 433 stehen, nicht 315 |
-| ca. 1,5 m | Draht, beliebig | 8 | 1 m Antenne für Woche 2, dazu 2 × 17,3 cm für 433 MHz |
+| ca. 1,5 m | Draht, beliebig | 10 | 50 cm Antenne für den Knacks-Detektor, 1 m zum Vergleich an Tag 8, 2 × 17,3 cm für 433 MHz |
 
 Nicht zwingend nötig: ein aktiver Summer (Tag 5, zum Vergleich hören), eine Powerbank (Tag 20, ein langes
 USB-Kabel tut es auch), Alufolie und Keksdose (Tag 19).
@@ -151,7 +151,7 @@ Feste Pins, beim Uno und beim Nano gleich:
 | 2 | **Die erste LED blinkt** | Erstes eigenes Programm. Mit `delay` spielen: schneller, langsamer. | `tag02_blinken` |
 | 3 | **Drei flackernde Kerzen** | Zufällige Helligkeit sieht aus wie Kerzenflammen. | `tag03_kerzen` |
 | 4 | **Licht per Knopf** | Der Taster schaltet die Kerze an und aus. | `tag04_taster` |
-| 5 | **Jingle Bells** | Der passive Summer spielt die Melodie. Dann den aktiven Summer einstecken: Der kann nur einen Ton, weil er seinen eigenen Tongeber hat. So lernt man den Unterschied. | `tag05_melodie` |
+| 5 | **Jingle Bells** | Der passive Summer spielt die Melodie. Dann den aktiven Summer einstecken: Er schnarrt oder spielt schräg, weil er seinen eigenen Tongeber hat. So lernt man den Unterschied. | `tag05_melodie` |
 | 6 | **Nikolaus: Das Licht-Theremin** | Hand über den Fotowiderstand: Je dunkler, desto tiefer der Ton. Mit der Handy-Taschenlampe spielen. | `tag06_lichttheremin` |
 | 7 | **Das Nachtlicht** | Wird es dunkel, gehen die Kerzen von selbst an. Das braucht das Finale wieder. Übrigens für Neugierige: Mit `uebrigens_lampenflackern` im Seriellen Plotter nachsehen, ob die LED-Lampen im Haus flackern. **(prüfen: ob der Fotowiderstand dafür schnell genug ist)** | `tag07_nachtlicht` |
 
@@ -159,12 +159,12 @@ Feste Pins, beim Uno und beim Nano gleich:
 
 | Tag | Experiment | Was passiert | Sketch |
 |---|---|---|---|
-| 8 | **Die Luft ist voller Strom** | Ein Draht an A0, sonst nichts. Im Seriellen Plotter erscheint eine Welle, sobald man die Hand nähert oder ihn an ein Netzkabel hält. Das ist das Stromnetz mit 50 Hz, ganz ohne Kontakt. Die erste Antenne des Kalenders. | `tag08_offener_eingang` |
-| 9 | **Der Kabelsucher** | Den Draht an der Wand entlangführen: Wo eine Leitung liegt, piept es. Mit dem Potentiometer stellt man die Empfindlichkeit ein. **Nur von außen suchen, nie in Steckdosen fassen.** | `tag09_kabelsucher` |
-| 10 | **Der Knacks-Detektor** | Lichtschalter, Wasserkocher, Staubsauger: Jeder Funke im Schalter ist ein winziger Funksender. Der Arduino knackt und zählt mit. Genau so orten Blitzdetektoren Gewitter. Übrigens: Auf blitzortung.org sieht man das Netz der Hobby-Blitzdetektoren live. **(prüfen: ob die Knackse zuverlässig ankommen)** | `tag10_knacksdetektor` |
+| 8 | **Die Luft ist voller Strom** | Eine kurze Steckbrücke an A0, sonst nichts. Im Seriellen Plotter laufen Welle und Stärke. Nähert man den Finger von der Seite, steigt die Stärke von ca. 170 auf 350, beim Antippen auf über 700 (getestet 17.11.). Das ist das Stromnetz mit 50 Hz, ganz ohne Kontakt. Die erste Antenne des Kalenders. | `tag08_offener_eingang` |
+| 9 | **Der Brumm-Melder** | Am Schreibtisch: Mit dem Drehknopf eine Schwelle einstellen. Hand nähern oder ein eingestecktes Verlängerungskabel an die Steckbrücke halten: Kerze und Summer melden den Strom, je näher, desto höher. Stecker ziehen: Stille. Wandsuche mit Powerbank nur als Bonus. **Nur von außen, nie in Steckdosen fassen.** | `tag09_kabelsucher` |
+| 10 | **Der Knacks-Detektor** | 50 cm Draht an A0, Knopf so einstellen, dass es in Ruhe fast nie knackt. Schreibtischlampe, Aktenvernichter, Föhn: Jeder Funke im Schalter ist ein winziger Funksender. Der Arduino knackt und zählt mit. Genau so orten Blitzdetektoren Gewitter. Übrigens: Auf blitzortung.org sieht man das Netz der Hobby-Blitzdetektoren live. (getestet 17.11.) | `tag10_knacksdetektor` |
 | 11 | **Das Ultraschall-Theremin** | Der Ultraschall-Sensor ruft Töne, die zu hoch für unsere Ohren sind, und lauscht auf das Echo, wie eine Fledermaus. Die Hand darüber auf und ab bewegen: Der Summer spielt dazu. | `tag11_ultraschalltheremin` |
-| 12 | **Du bist eine Antenne** | Sketch von Tag 8. Draht anfassen: Die Welle wird riesig. Zu zweit Hände halten. Barfuß gegen Hausschuhe. Draht 10 cm gegen 1 m. Was macht die Welle größer? | `tag08_offener_eingang` |
-| 13 | **Störungsjagd im Haus** | Sketch von Tag 9 mit Seriellem Monitor. Handy-Ladegerät, Laptop-Netzteil, LED-Lampe, Föhn: Wer stört am meisten? Eine Hitliste der Funkstörer im Haus. | `tag09_kabelsucher` |
+| 12 | **Der Morse-Übersetzer** | Der Taster wird zur Morsetaste, der Summer piept, und der Arduino übersetzt live in Buchstaben im Seriellen Monitor. Kein Morse-Lernen, ein Spickzettel genügt: SOS, den eigenen Namen tippen. Bonus: echte Morsezeichen von Funkamateuren auf dem WebSDR (7020 kHz, CW). | `tag12_morseuebersetzer` |
+| 13 | **Der Radar-Wächter** | Der Ultraschall-Sensor misst die freie Strecke durchs Zimmer und meldet jeden, der durch den Strahl läuft, mit Abstand und Zeit. Radar macht dasselbe mit Funkwellen, Funkamateure sogar mit dem Mond als Spiegel. | `tag13_radarwaechter` |
 | 14 | **Zahlen per Licht** | Die LED blitzt eine Zahl, der Fotowiderstand zählt mit. An, aus, an, aus: So funktioniert ab morgen auch der Funk. **(prüfen: Tempo)** | `tag14_lichtfunk` |
 
 ### Woche 3: Echter Funk auf 433 MHz
@@ -189,8 +189,8 @@ Feste Pins, beim Uno und beim Nano gleich:
 
 ### Amateurfunk als roter Faden
 
-Kein Lizenz-Vortrag, sondern kleine Häppchen: Die Tage 6, 10, 13, 17, 20 und 23 haben am Ende eine
-**📻 Funkamateur-Ecke** mit einer Geschichte aus dem Amateurfunk (Theremin, Gewitter auf Kurzwelle, Störungsjagd,
+Kein Lizenz-Vortrag, sondern kleine Häppchen: Die Tage 6, 10, 12, 13, 17, 20 und 23 haben am Ende eine
+**📻 Funkamateur-Ecke** mit einer Geschichte aus dem Amateurfunk (Theremin, Gewitter auf Kurzwelle, Morse, Mond-Echo,
 70-cm-Band, ISS, WebSDR). Am 24. folgt der Ausblick auf die Klasse N mit drei Schritten:
 [50ohm.de](https://50ohm.de) (kostenlose Lernplattform des DARC), Ortsverband, WebSDR zum Zuhören.
 
@@ -205,8 +205,9 @@ Wer den Kalender verschenken will und die Teile verteilen möchte:
 | 4 | Taster |
 | 5 | passiver und aktiver Summer |
 | 6 | Fotowiderstand, 10 kΩ |
-| 8 | 1 m Draht |
+| 8 | kurze Steckbrücke |
 | 9 | Potentiometer |
+| 10 | 50 cm Draht |
 | 11 | Ultraschall-Sensor |
 | 15 | 433-MHz-Empfänger |
 | 17 | 2 × 17,3 cm Draht |
@@ -220,7 +221,7 @@ An den übrigen Tagen wird nur umgebaut.
 ## Rechtliches und Sicherheit
 
 - **Strom:** Auf dem Steckbrett gibt es nur 5 V vom USB, das ist ungefährlich. Mit 230 V wird nie gearbeitet.
-  Kabelsucher und Störungsjagd halten den Draht nur in die Nähe von Wänden und geschlossenen Kabeln. Nichts
+  Brumm-Melder und Knacks-Detektor halten den Draht nur in die Nähe von Wänden und geschlossenen Kabeln. Nichts
   aufschrauben, nicht in Steckdosen fassen, keine beschädigten Kabel.
 - **433 MHz:** Der Bereich 433,05–434,79 MHz ist für Funkanwendungen geringer Reichweite allgemein zugeteilt, laut
   [mikrocontroller.net](https://www.mikrocontroller.net/articles/Allgemeinzuteilung) mit 10 mW ERP (Vfg 30/2014).

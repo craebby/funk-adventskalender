@@ -21,7 +21,7 @@ raus dürfen. **Jedes Loch wird nur einmal benutzt**, auch auf den Schienen. So 
 | Kerze 2 (gelb) | 220 Ω e13–f13, LED langes Bein j13, kurzes in rechte − | Pin 6 → a13 |
 | Kerze 3 (grün) | 220 Ω e16–f16, LED langes Bein j16, kurzes in rechte − | Pin 7 → a16 |
 | Fotowiderstand | Beine in c17 und c18. 10 kΩ von b18 in die linke − | a17 → linke +, a18 → A1 |
-| Taster | über den Graben: Beine in e20, e22, f20, f22 | Pin 3 → a20, a22 → linke − |
+| Taster | über den Graben: Beine in e20, e22, f20, f22 (breiter Taster: d/g). Die weiten Beine über dem Graben sind fest verbunden, Reihe 20 und 22 erst beim Drücken | Pin 3 → a20, a22 → linke − |
 | Passiver Summer | Beine waagerecht: + (das längere) in i25, − direkt in die rechte − (Reihe 25). Das Gehäuse liegt über j und der Schiene | Pin 9 → f25 |
 | Potentiometer | Beine in c2, c3, c4 (je nach Abstand auch 2/4/6) | a2 → linke +, a4 → linke −, a3 → A2 |
 | Ultraschall HC-SR04 | Stifte in i2 (VCC), i3 (Trig), i4 (Echo), i5 (GND), Augen nach außen | f2 → rechte +, f3 → Pin 4, f4 → Pin 8, f5 → rechte − |

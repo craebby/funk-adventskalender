@@ -1,8 +1,8 @@
-// Tag 9: Der Kabelsucher
-// Draht an A0 wie gestern. LED mit 220 Ohm an Pin 5, passiver Summer an Pin 9.
-// Potentiometer: aeussere Beine an 5V und GND, mittleres Bein an A2. Damit stellst du die Empfindlichkeit ein.
-// Den Draht an der Wand entlangfuehren: Wo eine Stromleitung liegt, piept es.
-// Nur von aussen suchen! Nie in Steckdosen oder an offene Leitungen fassen.
+// Tag 9: Der Brumm-Melder
+// Kurze Steckbruecke an A0 wie gestern. LED mit 220 Ohm an Pin 5, passiver Summer an Pin 9.
+// Potentiometer: aeussere Beine an 5V und GND, mittleres Bein an A2. Damit stellst du die Schwelle ein.
+// Hand naehern, eingestecktes Verlaengerungskabel an die Steckbruecke halten: Es piept.
+// Nur von aussen! Nie in Steckdosen oder an offene Leitungen fassen.
 
 const int ANTENNE = A0;
 const int POTI = A2;
@@ -17,6 +17,8 @@ void setup() {
 void loop() {
   // 40 ms lang messen (zwei volle Netzschwingungen) und Groesst- und Kleinstwert merken
   int hoch = 0, tief = 1023;
+  // Nach dem Poti-Lesen haengt im Arduino noch dessen Spannung nach. Die ersten Messungen verwerfen.
+  for (int i = 0; i < 5; i++) analogRead(ANTENNE);
   unsigned long start = millis();
   while (millis() - start < 40) {
     int w = analogRead(ANTENNE);

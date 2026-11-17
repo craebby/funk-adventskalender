@@ -35,7 +35,7 @@ Das hier wird wirklich gebraucht, egal aus welchem Kit:
 | 1 | Fotowiderstand | 6 | |
 | 1 | Taster | 4 | |
 | 1 | Potentiometer 10 kΩ | 9 | 1 bis 100 kΩ gehen auch |
-| 1 | **passiver** Summer | 5 | ein aktiver kann keine Melodien |
+| 1 | **passiver** Summer | 5 | oder eine Piezo-Scheibe. Ein aktiver spielt Melodien nur schräg |
 | 1 | Ultraschall-Sensor HC-SR04 | 11 | |
 | 1 | 433-MHz-Sender + Empfänger (FS1000A/MX-FS-03V + XY-MK-5V/MX-05V) | 15 | auf dem Empfänger muss 433 stehen |
 

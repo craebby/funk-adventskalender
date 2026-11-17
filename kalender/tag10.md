@@ -1,10 +1,11 @@
 # 10. Dezember: Der Knacks-Detektor
 
-**Heute neu:** nichts
+**Heute neu:** ein Stück Draht, ca. **50 cm** (Klingeldraht, Litze oder drei Steckbrücken hintereinander gesteckt)
 
 ## Aufbau
 
-Bleibt wie gestern: Draht an A0, Drehknopf an A2.
+Drehknopf bleibt an A2. Statt der kurzen Steckbrücke steckt jetzt der **50-cm-Draht** in A0. Ein Knacks ist nur
+ein winziger Stoß, dafür braucht die Antenne etwas mehr Länge als gestern.
 
 ## Programm
 
@@ -12,12 +13,21 @@ Bleibt wie gestern: Draht an A0, Drehknopf an A2.
 
 ## Was passiert
 
-Wie gestern: Nach dem Hochladen an die Powerbank, dann bist du beweglich. Kerze und Summer melden jeden Knacks,
-mitzählen musst du dann selbst. Leg den Draht neben einen Lichtschalter und schalte. Knacks! Die rote Kerze blitzt, der Summer klickt und im
-Monitor steht „Knacks Nr. 1“. Probier den Wasserkocher, den Staubsauger, den Föhn: Jedes Ein- und Ausschalten
-zählt.
+Das Steckbrett bleibt wieder am Schreibtisch. Stell eine **Schreibtischlampe** oder eine **Steckdosenleiste mit
+Schalter** direkt neben den Draht und schalte. Knacks! Die rote Kerze blitzt, der Summer klickt und im
+Monitor steht „Knacks Nr. 1“. Probier Ein- und Ausschalten getrennt: Welches knackt lauter?
 
-Knackt es dauernd von allein, den Drehknopf nach rechts drehen. Knackt es nie, nach links. **(prüfen)**
+**Erst einstellen:** Dreh den Knopf so weit nach rechts, dass es in Ruhe **fast nie** knackt. Das ist wichtig,
+sonst zählt der Detektor auch das normale Brummen mit.
+
+Gut funktionieren zum Beispiel der Schalter einer Schreibtischlampe und ein Aktenvernichter. Auch ein Gerät mit
+Motor wie Föhn oder Staubsauger knackt beim Ein- und Ausschalten.
+
+## Für Mutige: mit Powerbank zum Lichtschalter
+
+Mit einer Powerbank statt des PCs kannst du das Steckbrett neben den Lichtschalter an der Wand halten, oder neben
+Wasserkocher, Föhn und Staubsauger. Halt es am Rand fest und lass den Draht frei abstehen. Kerze und Summer
+melden jeden Knacks, mitzählen musst du dann selbst.
 
 ## Übrigens
 

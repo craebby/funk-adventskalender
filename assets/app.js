@@ -3,8 +3,8 @@
 const TITEL = [
   "Hallo Steckbrett", "Die erste LED blinkt", "Drei flackernde Kerzen", "Licht per Knopf",
   "Jingle Bells", "Nikolaus spielt Licht-Theremin", "Das Nachtlicht", "Die Luft ist voller Strom",
-  "Der Kabelsucher", "Der Knacks-Detektor", "Das Ultraschall-Theremin", "Du bist eine Antenne",
-  "Störungsjagd im Haus", "Zahlen per Licht", "So klingt Funkstille", "Wer funkt denn hier?",
+  "Der Brumm-Melder", "Der Knacks-Detektor", "Das Ultraschall-Theremin", "Der Morse-Übersetzer",
+  "Der Radar-Wächter", "Zahlen per Licht", "So klingt Funkstille", "Wer funkt denn hier?",
   "Eine Antenne bauen", "Der eigene Sender", "Die Keksdose als Funkbunker", "Die Weihnachtsfernbedienung",
   "Die Funk-Postkarte", "Wie falsch geht der Arduino?", "Die Atomuhr hören", "Der funkgesteuerte Weihnachtsbaum",
 ];
@@ -19,7 +19,7 @@ const SEITEN = {
 };
 
 // Bei geaenderten Steckbildern hochzaehlen, damit Browser nicht die alte Fassung aus dem Cache zeigen
-const BILD_VERSION = 4;
+const BILD_VERSION = 7;
 
 const SPEICHER = "funkadvent";
 
@@ -146,6 +146,10 @@ function linksUmschreiben(wurzel) {
     else if (href.includes("einkauf.md")) a.href = "tag.html?s=einkauf";
     else if (href.startsWith("../")) a.href = href.slice(3);
   }
+  for (const img of wurzel.querySelectorAll("img[src^='../']")) {
+    img.src = img.getAttribute("src").slice(3);
+    img.loading = "lazy";
+  }
 }
 
 async function codeKaesten(blatt) {
@@ -153,7 +157,7 @@ async function codeKaesten(blatt) {
   for (const pfad of pfade) {
     let code;
     try {
-      const antwort = await fetch(pfad);
+      const antwort = await fetch(pfad, { cache: "no-cache" });
       if (!antwort.ok) continue;
       code = await antwort.text();
     } catch { continue; }
@@ -206,7 +210,7 @@ async function tagesseite() {
   }
 
   try {
-    const md = await (await fetch(datei)).text();
+    const md = await (await fetch(datei, { cache: "no-cache" })).text();
     blatt.innerHTML = window.marked.parse(md);
   } catch {
     blatt.innerHTML = "<p>Die Seite konnte nicht geladen werden.</p>";

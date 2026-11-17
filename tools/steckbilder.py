@@ -83,12 +83,22 @@ def draht(p1, p2, farbe, breite=3):
             f'stroke-width="{breite}" stroke-linecap="round" opacity="0.9"/>')
 
 
+FARBRINGE = {   # 4-Ring-Code, wie er auf den meisten Widerstaenden steht
+    "220 Ω": ("#d32f2f", "#d32f2f", "#795548", "#c9a227"),   # rot rot braun gold
+    "10 kΩ": ("#795548", "#111111", "#f57c00", "#c9a227"),   # braun schwarz orange gold
+}
+
+
 def widerstand(h1, h2, label):
     (x1, y1), (x2, y2) = loch(h1), loch(h2)
     mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+    ringe = "".join(
+        f'<rect x="{mx - 10 + dx}" y="{my - 6}" width="3" height="12" fill="{farbe}"/>'
+        for dx, farbe in zip((2, 7, 12, 17), FARBRINGE.get(label, ())))
     return (f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="#777" stroke-width="2"/>'
-            f'<rect x="{mx - 11}" y="{my - 5}" width="22" height="10" rx="4" fill="#d7b98e" stroke="#8d6e63"/>'
-            f'<text x="{mx}" y="{my - 8}" text-anchor="middle" font-size="9">{label}</text>')
+            f'<rect x="{mx - 13}" y="{my - 6}" width="26" height="12" rx="5" fill="#e8d3a8" stroke="#8d6e63"/>'
+            + ringe +
+            f'<text x="{mx}" y="{my - 9}" text-anchor="middle" font-size="9">{label}</text>')
 
 
 def led(anode, kathode, farbe):
@@ -101,11 +111,25 @@ def led(anode, kathode, farbe):
 
 
 def taster(r1, r2):
+    """Weite Beine (ueber den Graben) sind fest verbunden: graue Linie. Nahe Beine (Reihe r1/r2) verbindet
+    erst der Druck: gestrichelte Linie."""
     x1, y1 = loch(f"e{r1}")
     x2, y2 = loch(f"f{r2}")
+    mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+    beine = "".join(f'<rect x="{bx - 2.5}" y="{by - 2.5}" width="5" height="5" fill="#cfd8dc" stroke="#90a4ae"/>'
+                    for bx in (x1, x2) for by in (y1, y2))
     return (f'<rect x="{x1 - 5}" y="{y1 - 5}" width="{x2 - x1 + 10}" height="{y2 - y1 + 10}" rx="3" fill="#333"/>'
-            f'<circle cx="{(x1 + x2) / 2}" cy="{(y1 + y2) / 2}" r="9" fill="#555" stroke="#111"/>'
-            f'<text x="{x2 + 10}" y="{(y1 + y2) / 2 + 4}" font-size="9">Taster</text>')
+            f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y1}" stroke="#b0bec5" stroke-width="2.5"/>'
+            f'<line x1="{x1}" y1="{y2}" x2="{x2}" y2="{y2}" stroke="#b0bec5" stroke-width="2.5"/>'
+            f'<line x1="{x1}" y1="{y1 + 4}" x2="{x1}" y2="{y2 - 4}" stroke="#ffca28" stroke-width="2" stroke-dasharray="3 3"/>'
+            f'<line x1="{x2}" y1="{y1 + 4}" x2="{x2}" y2="{y2 - 4}" stroke="#ffca28" stroke-width="2" stroke-dasharray="3 3"/>'
+            + beine +
+            f'<circle cx="{mx}" cy="{my}" r="9" fill="#555" stroke="#111"/>'
+            f'<text x="{x2 + 10}" y="{my - 6}" font-size="9">Taster</text>'
+            f'<line x1="{x2 + 10}" y1="{my + 2}" x2="{x2 + 22}" y2="{my + 2}" stroke="#90a4ae" stroke-width="2.5"/>'
+            f'<text x="{x2 + 25}" y="{my + 5}" font-size="7.5" fill="#555">immer verbunden</text>'
+            f'<line x1="{x2 + 10}" y1="{my + 12}" x2="{x2 + 22}" y2="{my + 12}" stroke="#f9a825" stroke-width="2" stroke-dasharray="3 3"/>'
+            f'<text x="{x2 + 25}" y="{my + 15}" font-size="7.5" fill="#555">nur beim Drücken</text>')
 
 
 def summer(plus, minus):
@@ -241,11 +265,16 @@ def tag_bild(t):
             b.add(draht(loch("L+17"), loch("a17"), FARBE["plus"], 4), neu(6))
             b.add(uno_draht("A1", "a18", FARBE["analog"]), neu(6))
             b.add(widerstand("b18", "L-18", "10 kΩ"), neu(6))
-        if 8 <= t <= 13:
+        if 8 <= t <= 9:
             ax, ay = uno_pin("A0")
-            b.add(f'<path d="M{ax},{ay} C 200,{ay + 40} 60,{ay + 300} 180,{ay + 420}" stroke="#795548" '
-                  f'stroke-width="3" fill="none"/><text x="160" y="{ay + 440}" font-size="10">'
-                  f'Antennendraht ca. 1 m, Ende frei</text>', neu(8))
+            b.add(f'<path d="M{ax},{ay} C 200,{ay + 8} 212,{ay + 40} 205,{ay + 75}" stroke="#795548" '
+                  f'stroke-width="3" fill="none"/><text x="162" y="{ay + 92}" font-size="10">'
+                  f'kurze Steckbrücke, Ende frei</text>', neu(8))
+        if t == 10:
+            ax, ay = uno_pin("A0")
+            b.add(f'<path d="M{ax},{ay} C 215,{ay + 30} 222,{ay + 220} 205,{ay + 345}" stroke="#795548" '
+                  f'stroke-width="3" fill="none"/><text x="160" y="{ay + 362}" font-size="10">'
+                  f'Draht ca. 50 cm, Ende frei</text>', True)
         if t >= 9:
             b.add(poti([2, 3, 4]), neu(9))
             b.add(draht(loch("L+2"), loch("a2"), FARBE["plus"], 4), neu(9))

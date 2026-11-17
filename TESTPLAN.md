@@ -17,19 +17,19 @@ Ziel: jeden Tag einmal echt aufbauen, bevor der Kalender beworben wird. Ergebnis
 
 | Tag | Was prüfen | Erwartet | Ergebnis |
 |---|---|---|---|
-| 1 | LED leuchtet ohne Programm | rote LED an | |
-| 2 | Blink-Sketch, `delay(20)` | Blinken, ab ca. 20 ms Dauerleuchten | |
-| 3 | drei Kerzen | rot/gelb flackern weich, grün springt an/aus | |
+| 1 | LED leuchtet ohne Programm | rote LED an | ✅ 17.11. 220 Ω aus Fritzing-Kiste, LED eher schwach. Brett: links + außen, rechts + innen → Farbhinweis ergänzt |
+| 2 | Blink-Sketch, `delay(20)` | Blinken, ab ca. 20 ms Dauerleuchten | ✅ 17.11. |
+| 3 | drei Kerzen | rot/gelb flackern weich, grün springt an/aus | ✅ 17.11. |
 | 4 | Taster schaltet um | Druck = an, Druck = aus | |
-| 5 | Jingle Bells, dann aktiver Summer | Melodie, aktiver schnarrt nur. **Summer quer (i25/Minus-Schiene) passt?** | |
+| 5 | Jingle Bells, dann aktiver Summer | Melodie, aktiver schnarrt nur. **Summer quer (i25/Minus-Schiene) passt?** | ✅ 17.11. Aktiver Summer spielt die Melodie auch, nur kratzig. Piezo-Scheibe als Ersatz für den passiven klappt prima → Text angepasst |
 | 6 | Licht-Theremin | Ton folgt der Hand | |
 | 7 | Nachtlicht, Wert `DUNKEL` | Kerzen gehen bei Dunkelheit an. Optional: `uebrigens_lampenflackern` zeigt 100 Hz? **(prüfen)** | |
-| 8 | offener Eingang im Plotter | 50-Hz-Welle am Monitorkabel | |
-| 9 | Kabelsucher mit Powerbank | Piepen an der Wandleitung, Poti stellt ein | |
-| 10 | Knacks-Detektor | Lichtschalter löst Knacks aus **(prüfen: Schwelle)** | |
-| 11 | Ultraschall-Theremin | Ton folgt dem Abstand 2–40 cm | |
-| 12 | Körper-Antenne | Welle wird beim Anfassen größer | |
-| 13 | Störungsjagd am Schreibtisch | Netzteile unterscheiden sich | |
+| 8 | offener Eingang im Plotter | Welle + Staerke | ⚠️ 17.11. Mit 1 m Draht übersteuert (Ruhe 800–1000). Mit kurzer Steckbrücke: Ruhe ~170, seitlich nähern 200–250, Isolierung 350, Spitze antippen 700+. Sketch auf Welle/Staerke umgebaut, Text angepasst |
+| 9 | Brumm-Melder am Schreibtisch | Hand nähern piept, Verlängerungskabel eingesteckt piept, ausgesteckt still | ✅ 17.11. Wandsuche unpraktisch → zum Brumm-Melder am Schreibtisch umgebaut, klappt |
+| 10 | Knacks-Detektor am Schreibtisch | Schalter neben dem Draht → Knacks | ⚠️ 17.11. Mit kurzer Steckbrücke nichts. Mit 50 cm Draht und Poti fast bis kein Auslösen in Ruhe: Aktenvernichter und Schalter der Schreibtischlampe knacken → Text angepasst |
+| 11 | Ultraschall-Theremin | Ton folgt dem Abstand 2–40 cm | ✅ 17.11. Erst an A4 statt Pin 4 gesteckt → Warnkasten ergänzt |
+| 12 | Morse-Übersetzer (neu 17.11.) | Taster piept, Monitor zeigt `... = S`. **(prüfen: Tempo LANG 250 ms passt?)** | |
+| 13 | Radar-Wächter (neu 17.11.) | Freie Strecke wird gemessen, Durchlaufen zählt als Besuch. **(prüfen: Reichweite, Fehlalarme)** | |
 | 14 | Zahlen per Licht | „Stimmt!“ **(prüfen: Tempo, LDR-Trägheit)** | |
 | 15 | Rauschen des Empfängers | Summer rauscht, Plotter zappelt | |
 | 16 | rc-switch lauscht | eigene Fernbedienung/Klingel zeigt Code, sonst nichts | |

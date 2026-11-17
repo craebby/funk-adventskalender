@@ -11,6 +11,10 @@ VCC, Trig, Echo, GND.
 - f4 (Echo) → Pin 8
 - f5 (GND) → rechte −
 
+> **Achtung, Verwechslungsgefahr:** **Pin 4** und **Pin 8** sind die Buchsen auf der Digitalseite mit den Nummern
+> 0 bis 13, nicht **A4** auf der Analogseite! Bleibt der Monitor bei 0, liegt es fast immer daran, an vertauschtem
+> Trig und Echo oder an der rechten +-Schiene (steckt die Brücke unten in Reihe 30 noch?).
+
 ## Programm
 
 [`tag11_ultraschalltheremin.ino`](../sketches/tag11_ultraschalltheremin/tag11_ultraschalltheremin.ino)
