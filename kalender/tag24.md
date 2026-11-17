@@ -29,7 +29,16 @@ In 24 Tagen hast du gesehen, dass die Luft voller Wellen ist: 50 Hz aus der Stec
 Lichtschalter, Ultraschall, 433 MHz und eine Atomuhr auf 77,5 kHz.
 
 Wenn dir das Spaß gemacht hat: Funkamateure dürfen mit selbst gebauten Geräten richtig senden, auf der ganzen
-Welt. Den Einstieg bildet die Lizenzklasse N, seit 2024, mit einer Prüfung bei der Bundesnetzagentur. Frag beim
-nächsten DARC-Ortsverband nach, die meisten freuen sich über Besuch.
+Welt. Den Einstieg bildet die Lizenzklasse N, seit 2024, mit einer Prüfung bei der Bundesnetzagentur.
+
+So kommst du hin:
+
+1. **[50ohm.de](https://50ohm.de)**: die kostenlose Lernplattform des DARC. Dort gibt es einen Online-Kurs für
+   Klasse N und eine Prüfungssimulation. Einfach mal reinklicken und schauen, wie viel du nach diesem Kalender
+   schon weißt.
+2. **Ortsverband**: Frag beim nächsten DARC-Ortsverband nach. Viele bieten Kurse an, und fast alle freuen sich
+   über Besuch beim OV-Abend.
+3. **Zuhören geht sofort**: Mit dem WebSDR von Tag 23 kannst du schon heute Abend Funkamateuren aus ganz Europa
+   lauschen.
 
 **Frohe Weihnachten!**

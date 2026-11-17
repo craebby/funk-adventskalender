@@ -1,5 +1,12 @@
 # Funk-Adventskalender: Das Unsichtbare hören
 
+> ⚠️ **Spoiler-Warnung:** Hier im Repository liegen alle 24 Tage offen. Wer sich überraschen lassen will, öffnet
+> lieber den Kalender unter **https://craebby.github.io/funk-adventskalender/** und schaut hier erst nach
+> Heiligabend rein.
+>
+> 💛 Gefällt dir der Kalender? Über [GitHub Sponsors](https://github.com/sponsors/craebby) kannst du einen
+> Kaffee spendieren.
+
 Konzept, Stand 17.11.2026.
 
 24 kleine Experimente auf dem Steckbrett, jeden Tag 15 bis 30 Minuten. Man braucht kein Vorwissen und keinen
@@ -177,11 +184,12 @@ Feste Pins, beim Uno und beim Nano gleich:
 | 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach einer Minute die Uhrzeit. **(prüfen: Pegel des Moduls)** | optional `tag23_atomuhr_modul` |
 | 24 | **Finale: Der funkgesteuerte Weihnachtsbaum** | Taste 1 schaltet die Kerzen, Taste 2 schickt den Gruß und spielt Jingle Bells, und bei Dunkelheit gehen die Kerzen von selbst an. Bonus mit SDR-Stick: den eigenen Sender als Strich im Wasserfall sehen. | Nano: `tag24_finale` |
 
-### Zum Schluss, ein Absatz im Text am 24.
+### Amateurfunk als roter Faden
 
-„Wenn dir das Spaß gemacht hat: Funkamateure dürfen mit selbst gebauten Geräten richtig senden, auf der ganzen Welt.
-Den Einstieg bildet die Lizenzklasse N, seit 2024, mit einer Prüfung bei der Bundesnetzagentur. Frag beim
-nächsten DARC-Ortsverband nach, die meisten freuen sich über Besuch.“
+Kein Lizenz-Vortrag, sondern kleine Häppchen: Die Tage 6, 10, 13, 17, 20 und 23 haben am Ende eine
+**📻 Funkamateur-Ecke** mit einer Geschichte aus dem Amateurfunk (Theremin, Gewitter auf Kurzwelle, Störungsjagd,
+70-cm-Band, ISS, WebSDR). Am 24. folgt der Ausblick auf die Klasse N mit drei Schritten:
+[50ohm.de](https://50ohm.de) (kostenlose Lernplattform des DARC), Ortsverband, WebSDR zum Zuhören.
 
 ## Hinter den Türchen
 

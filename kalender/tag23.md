@@ -26,3 +26,5 @@ Achtung: Die meisten Module vertragen nur **3,3 V**, nicht 5 V. **(prüfen: Modu
 Gestern ist dein Arduino um Sekunden falsch gegangen. Die Atomuhren der Physikalisch-Technischen Bundesanstalt in
 Braunschweig gehen in Millionen Jahren nicht eine Sekunde falsch. Über DCF77 bekommt jede Funkuhr diese
 Genauigkeit geschenkt.
+
+> 📻 **Funkamateur-Ecke:** Den WebSDR hat ein Funkamateur erfunden: Pieter-Tjerk de Boer, Rufzeichen PA3FWM, an der Uni Twente. Inzwischen gibt es weltweit Hunderte WebSDRs, viele davon betrieben von Funkamateuren, die ihren Empfänger einfach für alle öffnen. Probier gern andere Frequenzen aus, du kannst nichts kaputt machen.

@@ -25,3 +25,5 @@ hoch. Wedel mit der Hand, und du spielst ein Instrument aus Licht.
 
 Der Fotowiderstand leitet umso besser, je mehr Licht auf ihn fällt. Zusammen mit dem 10-kΩ-Widerstand teilt er
 die 5 Volt auf. Am Eingang A1 kommt mal mehr, mal weniger an. Der Arduino misst das als Zahl von 0 bis 1023.
+
+> 📻 **Funkamateur-Ecke:** Ein Theremin spielt man, ohne es zu berühren. Erfunden hat es 1920 Leon Theremin, ein russischer Physiker und Funkpionier. Ganz viele Funkamateure haben so angefangen wie du gerade: aus Neugier, was man mit ein paar Bauteilen alles anstellen kann.

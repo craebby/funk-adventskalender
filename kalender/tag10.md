@@ -27,3 +27,5 @@ kurzen elektromagnetischen Stoß in alle Richtungen. Daher kommt sogar das Wort 
 
 Ein Blitz ist ein riesiger Funke. Hobby-Blitzdetektoren auf der ganzen Welt hören genau dieses Knacken und orten
 gemeinsam Gewitter. Auf **blitzortung.org** siehst du ihre Karte live.
+
+> 📻 **Funkamateur-Ecke:** Auf der Kurzwelle hört man Gewitter als lautes Knacken, oft aus hunderten Kilometern Entfernung. Funkamateure merken deshalb häufig schon vor dem Donner, dass ein Gewitter im Anmarsch ist, und bauen ihre Antennen ab.

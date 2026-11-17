@@ -29,3 +29,5 @@ Mal eine Karte deiner Wohnung und trag ein, wo es klappt.
 
 Die Sendeleistung ist winzig, ein paar Tausendstel Watt. Ein Handy sendet bis zu hundertmal stärker. Trotzdem
 schaffst du durch mehrere Wände. Funkamateure bauen mit wenigen Watt Verbindungen um die halbe Welt.
+
+> 📻 **Funkamateur-Ecke:** Auf der Internationalen Raumstation ISS steht eine Amateurfunkstation. Astronauten sprechen darüber regelmäßig mit Schulklassen auf der Erde, mit einer Funkleistung, die kaum größer ist als die eines Handfunkgeräts. Wer eine Lizenz hat, kann die ISS sogar selbst anfunken.

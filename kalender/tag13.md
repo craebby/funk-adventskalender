@@ -32,3 +32,5 @@ Wer gewinnt? Und was passiert, wenn das Gerät aus ist, aber noch in der Steckdo
 Viele Netzteile schalten innen zehntausende Male pro Sekunde, um klein und sparsam zu sein. Das strahlt ab.
 Damit sich die Geräte nicht gegenseitig stören, gibt es Grenzwerte, und für Funkamateure ist genau das ein
 Dauerthema: Billige Netzteile können den Empfang im ganzen Haus verrauschen.
+
+> 📻 **Funkamateur-Ecke:** Funkamateure sind die Profis im Störungsjagen. Mit einem kleinen Empfänger laufen sie durchs Haus, bis sie das Netzteil gefunden haben, das alles verrauscht. Genau wie du heute, nur mit Kopfhörer.

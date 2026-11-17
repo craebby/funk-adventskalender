@@ -2,65 +2,103 @@
 
 `LINK` = **https://craebby.github.io/funk-adventskalender/** (seit 17.11.2026 online)
 
-## Kurz (Mastodon, Fediverse, X, Bluesky, WhatsApp-Status)
+Faustregel beim Posten: Neugier wecken, nichts verraten. Die einzelnen Türchen nicht aufzählen, nur die
+Richtung zeigen. Wer mehr wissen will, klickt.
 
-> 📡🎄 Funk-Adventskalender 2026: 24 Türchen, 24 Experimente mit Arduino und Steckbrett. Vom ersten Blinken bis
-> zur eigenen 433-MHz-Funkfernbedienung, dazu Kabelsucher, Knacks-Detektor, Ultraschall-Theremin und die
-> Atomuhr DCF77. Kein Löten, kein Vorwissen, Teile ab ca. 40 €, kostenlos und offen.
-> LINK #Amateurfunk #HamRadio #Arduino #Adventskalender #Maker
+## Aufhänger (eine Zeile, für Überschriften und Status)
 
-## Mittel (Foren, Facebook-Gruppen, Reddit r/amateurfunk, r/arduino_de, Discord)
+- 📡 Dieses Jahr gibt's hinter jedem Türchen ein Experiment, das man hören kann.
+- 🎄 Die Luft um dich herum ist voller Signale. 24 Tage lang machst du sie hörbar.
+- 🔌 Kein Löten, keine Schokolade, aber am 24. ein Weihnachtsbaum mit Funkfernbedienung.
+- 📻 Vom ersten Blinken bis zur Atomuhr: der Adventskalender für alle, die wissen wollen, was da draußen funkt.
 
-**Titel:** Funk-Adventskalender zum Selberbauen: 24 Experimente mit Arduino, ohne Löten
+## Kurz (Mastodon, Bluesky, X, WhatsApp-Status)
+
+> 📡🎄 **Der Funk-Adventskalender ist da!**
+>
+> 24 Türchen, 24 Experimente auf dem Steckbrett. Du hörst den Strom in der Luft, jagst Funken im Lichtschalter,
+> spielst Theremin, empfängst echte Funksignale und lauschst der Atomuhr. An Heiligabend steuerst du deinen
+> Weihnachtsbaum per Funk.
+>
+> Kein Löten. Kein Vorwissen. Kostenlos und offen. Teile ab ca. 40 €.
+>
+> 👉 LINK
+>
+> #Amateurfunk #HamRadio #Arduino #Adventskalender #Maker #MINT
+
+## Mittel (Foren, Facebook-Gruppen, Reddit, Discord)
+
+**Titel:** 📡 Funk-Adventskalender 2026: 24 Experimente, die man hören kann. Kostenlos, ohne Löten
 
 > Moin zusammen,
 >
-> ich habe einen kostenlosen Adventskalender zusammengestellt, der Funk und Elektronik für Einsteiger greifbar
-> macht. Jeden Tag gibt es ein kleines Experiment auf dem Steckbrett, 15 bis 30 Minuten, die Programme gibt es
-> fertig zum Kopieren.
+> was steckt eigentlich alles in der Luft um uns herum? Genau darum geht es in meinem kostenlosen
+> Funk-Adventskalender. Jeden Tag ein Türchen, jeden Tag ein kleines Experiment auf dem Steckbrett,
+> 15 bis 30 Minuten. Die Programme gibt es fertig zum Kopieren.
 >
-> **Was passiert in den 24 Tagen?**
-> - Woche 1: LEDs, Kerzenflackern, Jingle Bells, ein Licht-Theremin
-> - Woche 2: Unsichtbare Felder: 50 Hz aus der Luft im Plotter, Kabelsucher, Knacks-Detektor wie ein Blitzdetektor,
->   Ultraschall-Theremin
-> - Woche 3: Echter Funk auf 433 MHz: Rauschen hören, Codes mitlesen, Viertelwellen-Antenne bauen, eigener Sender,
->   die Keksdose als Faradayscher Käfig
-> - Woche 4: Funk-Postkarte, wie falsch der Arduino geht, die Atomuhr DCF77 über einen WebSDR hören, und an
->   Heiligabend ein funkgesteuerter Weihnachtsbaum
+> **Was dich erwartet (ohne zu viel zu verraten):**
+> - 💡 Woche 1: Licht, Klang und das erste eigene Instrument
+> - ⚡ Woche 2: Unsichtbare Felder werden hörbar. Danach hörst du deine Wohnung mit anderen Ohren.
+> - 📡 Woche 3: Echter Funk auf 433 MHz, mit selbst gebauter Antenne
+> - 🎄 Woche 4: Eine Atomuhr, ein Weihnachtsgruß durch die Luft und ein großes Finale an Heiligabend
 >
-> **Was braucht man?** Ein Arduino-Starter-Kit, einen Nano und ein 433-MHz-Set, zusammen etwa 40 €. Wer eine
-> Bastelkiste hat, braucht oft nur das Funkset. Nichts wird gelötet, gearbeitet wird nur mit 5 V aus dem USB.
+> **Was brauche ich?** Einen Arduino Uno und Nano, ein Steckbrett, ein paar Bauteile und ein 433-MHz-Set.
+> Neu gekauft etwa 40 €, wer eine Bastelkiste hat, braucht oft nur das Funkset. Nichts wird gelötet,
+> alles läuft mit 5 V aus dem USB.
 >
-> Der Kalender ist ideal zum Verschenken, für Familien mit Kindern ab etwa 10 Jahren mit Unterstützung, für
-> Jugendgruppen im Ortsverband oder einfach für sich selbst. Am Ende gibt es einen kleinen Ausblick auf die
+> **Für wen?** Für Neugierige ab etwa 10 Jahren (mit etwas Hilfe), für Familien, Jugendgruppen, Schul-AGs,
+> und für alle, die schon immer mal wissen wollten, wie Funk eigentlich funktioniert. Zwischendurch gibt's
+> eine kleine **Funkamateur-Ecke**, und wer danach Feuer gefangen hat, findet am Ende den Weg zur
 > Einsteigerlizenz N.
 >
-> Alles ist offen und kostenlos: LINK
-> Quellcode und Steckbilder: https://github.com/craebby/funk-adventskalender
+> 👉 **LINK**
 >
-> Über Rückmeldungen und Fotos von euren Aufbauten freue ich mich!
-
-## Für Ortsverbände und Jugendgruppen (DARC-OV, Rundspruch, Vereinsheft)
-
-> **Funk-Adventskalender für Einsteiger**
+> Tipp: Mit dem Spoiler-Schalter lässt sich alles vorab ansehen, falls ihr die Teile verpacken und
+> verschenken wollt. Wer sich überraschen lassen will, schaut nicht ins GitHub-Repo, dort liegt alles offen.
 >
-> Wer Kinder, Jugendliche oder Interessierte an Funk und Elektronik heranführen möchte, findet unter LINK einen
-> kostenlosen Adventskalender mit 24 Experimenten. Ohne Löten und ohne Vorwissen wird auf dem Steckbrett gebaut:
-> vom Blinklicht über einen Kabelsucher und einen Knacks-Detektor bis zur selbst gebauten 433-MHz-Fernbedienung
-> mit Viertelwellen-Antenne. Die Atomuhr DCF77 wird über den WebSDR der Uni Twente gehört. Material ab ca. 40 €.
-> Gut geeignet für Jugendabende im OV oder als Weihnachtsgeschenk mit Einladung zum nächsten OV-Abend.
+> Ich freue mich riesig über Fotos eurer Aufbauten und Rückmeldungen!
+
+## Für Ortsverbände, Jugendgruppen und Vereinshefte (DARC-OV, Rundspruch, CQ DL)
+
+> **📡 Funk-Adventskalender: Nachwuchs-Futter für den Dezember**
+>
+> Wie bringt man Kinder, Jugendliche und Neugierige zum Funk, ohne mit Formeln und Prüfungsfragen
+> anzufangen? Mit Experimenten, die man hören kann. Unter LINK gibt es einen kostenlosen Adventskalender mit
+> 24 Steckbrett-Experimenten auf Arduino-Basis: ohne Löten, ohne Vorwissen, mit 5 V aus dem USB.
+>
+> Die Teilnehmer machen Störfelder hörbar, bauen einen Blitz- bzw. Knacks-Detektor, eine Viertelwellen-Antenne
+> und eine eigene 433-MHz-Fernbedienung und hören die Atomuhr DCF77 über einen WebSDR. In der
+> „Funkamateur-Ecke“ einzelner Tage geht es um das 70-cm-Band, die ISS und Funkamateure als Störungsjäger.
+> Am 24. Dezember gibt es einen Ausblick auf die Klasse N mit Hinweis auf **50ohm.de** und den nächsten OV.
+>
+> Ideal für Jugendabende, als Geschenk mit Einladung zum OV-Abend oder als Bausatz-Aktion im Verein.
+> Material ab ca. 40 € pro Person, alles offen unter MIT-Lizenz.
+
+## Ein Satz für Leute ohne Bastelerfahrung
+
+> Stell dir einen Adventskalender vor, der dir jeden Tag eine neue Superkraft gibt: Erst hörst du Strom,
+> dann Funken, dann Funk, und an Heiligabend schaltest du den Weihnachtsbaum aus dem Nebenzimmer. LINK
 
 ## Wo posten?
 
-- DARC-Ortsverband und Distrikt, Rundspruch, CQ DL Leserbrief
+- DARC-Ortsverband und Distrikt, Rundspruch, CQ DL Leserbrief, AJW-Referat (Jugendarbeit) des DARC
+- 50ohm.de-Team / AJW: fragen, ob sie den Kalender als Einstieg verlinken mögen
 - Reddit: r/amateurfunk, r/arduino_de, r/de_EDV
 - Mastodon: #Amateurfunk, #HamRadio, #Arduino
 - Facebook-Gruppen: Amateurfunk Deutschland, Arduino Deutschland, Maker-Gruppen
 - mikrocontroller.net (Forum „Projekte & Code“)
 - frifle (Fritjof Flechsig) per Discussion im Repo seines Kalenders fragen, ob er einen Hinweis setzt
 - Elektronik-Labor (Burkhard Kainka) per Mail anfragen
+- Schul-AGs, Makerspaces, FabLabs in der Nähe
+
+**Timing:** Erster Post Ende November (Leute müssen noch Teile bestellen), zweiter Post am 1. Dezember mit
+Foto vom ersten Türchen, dritter um den 20. herum mit dem Fernbedienungs-Video.
 
 ## Bilder zum Posten
 
-Nach dem Fotografieren mit den Kits: ein Foto vom fertigen Weihnachtsbaum (Türchen 24), eins vom Kalender auf dem
-Handy und ein Steckbild (`bilder/tag20.svg`).
+Nach dem Fotografieren mit den Kits:
+
+- Foto vom fertigen Weihnachtsbaum (Türchen 24), aber erst ab dem 24. posten
+- Screenshot vom Kalender auf dem Handy mit geschlossenen Türchen
+- ein Steckbild aus der ersten Woche (`bilder/tag03.svg`), das verrät nichts vom Funk
+- kurzes Video: Kerzen gehen per Fernbedienung an (ab Tag 20)

@@ -27,3 +27,5 @@ jemanden an oder starte ein Video: Mit Antenne knattert das Handy deutlich ins R
 
 Warum 17,3 cm? Eine Funkwelle bei 433 MHz ist von Berg zu Berg 69,2 cm lang. Antennen funktionieren besonders gut,
 wenn sie ein Viertel davon lang sind. Funkamateure rechnen das ständig, für jedes Band eine andere Länge.
+
+> 📻 **Funkamateur-Ecke:** 433 MHz liegt mitten im **70-cm-Band** der Funkamateure (430 bis 440 MHz). Dein Sender darf dort mit 10 Tausendstel Watt funken. Mit der Einsteigerlizenz **N** dürften Funkamateure auf demselben Band mit bis zu 10 Watt senden, tausendmal mehr, und mit Menschen sprechen statt nur Zahlen zu schicken.
