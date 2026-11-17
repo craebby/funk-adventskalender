@@ -4,7 +4,11 @@
 
 ## Aufbau
 
-Den Taster über den Graben setzen, die vier Beine in **e20, e22, f20, f22**. Pin 3 → a20, a22 → linke −.
+1. Den Taster über den Graben setzen, die vier Beine in **e20, e22, f20, f22**.
+2. Eine Steckbrücke von **Pin 3** am Uno nach **a20**.
+3. Eine kurze Steckbrücke von **a22** in die linke blaue **−**-Schiene. Ohne sie passiert beim Drücken nichts!
+
+Der Stromweg: Pin 3 → Reihe 20 → durch den gedrückten Taster → Reihe 22 → Minus.
 
 ## Programm
 

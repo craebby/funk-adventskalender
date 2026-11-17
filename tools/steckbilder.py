@@ -210,8 +210,8 @@ def tag_bild(t):
         b.add(uno())
         b.add(uno_draht("5V", "L+3", FARBE["plus"]), neu(1))
         b.add(uno_draht("GND", "L-4", FARBE["minus"]), neu(1))
-        b.add(draht(loch("L+30"), loch("R+30"), FARBE["plus"], 2), neu(1))
-        b.add(draht(loch("L-29"), loch("R-29"), FARBE["minus"], 2), neu(1))
+        b.add(draht(loch("L+30"), loch("R+30"), FARBE["plus"], 4), neu(1))
+        b.add(draht(loch("L-29"), loch("R-29"), FARBE["minus"], 4), neu(1))
         # Kerze 1
         b.add(widerstand("e10", "f10", "220 Ω"), neu(1))
         b.add(led("j10", "R-10", FARBE["rot"]), neu(1))
@@ -227,14 +227,14 @@ def tag_bild(t):
         if t >= 4:
             b.add(taster(20, 22), neu(4))
             b.add(uno_draht("Pin 3", "a20", FARBE["signal"]), neu(4))
-            b.add(draht(loch("a22"), loch("L-22"), FARBE["minus"], 2), neu(4))
+            b.add(draht(loch("a22"), loch("L-22"), FARBE["minus"], 4), neu(4))
         if t >= 5:
             b.add(summer("f25", "f28"), neu(5))
             b.add(uno_draht("Pin 9", "j25", FARBE["signal"]), neu(5))
-            b.add(draht(loch("j28"), loch("R-28"), FARBE["minus"], 2), neu(5))
+            b.add(draht(loch("j28"), loch("R-28"), FARBE["minus"], 4), neu(5))
         if t >= 6:
             b.add(fotowiderstand("c17", "c18"), neu(6))
-            b.add(draht(loch("L+17"), loch("a17"), FARBE["plus"], 2), neu(6))
+            b.add(draht(loch("L+17"), loch("a17"), FARBE["plus"], 4), neu(6))
             b.add(uno_draht("A1", "a18", FARBE["analog"]), neu(6))
             b.add(widerstand("b18", "L-18", "10 kΩ"), neu(6))
         if 8 <= t <= 13:
@@ -244,20 +244,20 @@ def tag_bild(t):
                   f'Antennendraht ca. 1 m, Ende frei</text>', neu(8))
         if t >= 9:
             b.add(poti([2, 3, 4]), neu(9))
-            b.add(draht(loch("L+2"), loch("a2"), FARBE["plus"], 2), neu(9))
-            b.add(draht(loch("a4"), loch("L-4"), FARBE["minus"], 2), neu(9))
+            b.add(draht(loch("L+2"), loch("a2"), FARBE["plus"], 4), neu(9))
+            b.add(draht(loch("a4"), loch("L-4"), FARBE["minus"], 4), neu(9))
             b.add(uno_draht("A2", "a3", FARBE["analog"]), neu(9))
         if t >= 11:
             b.add(ultraschall(), neu(11))
-            b.add(draht(loch("f2"), loch("R+2"), FARBE["plus"], 2), neu(11))
+            b.add(draht(loch("f2"), loch("R+2"), FARBE["plus"], 4), neu(11))
             b.add(uno_draht("Pin 4", "f3", FARBE["signal"]), neu(11))
             b.add(uno_draht("Pin 8", "f4", FARBE["signal"]), neu(11))
-            b.add(draht(loch("f5"), loch("R-5"), FARBE["minus"], 2), neu(11))
+            b.add(draht(loch("f5"), loch("R-5"), FARBE["minus"], 4), neu(11))
         if t >= 15:
             b.add(empfaenger(24, antenne=t >= 17), neu(15) or neu(17))
-            b.add(draht(loch("L+24"), loch("a24"), FARBE["plus"], 2), neu(15))
+            b.add(draht(loch("L+24"), loch("a24"), FARBE["plus"], 4), neu(15))
             b.add(uno_draht("Pin 2", "a25", FARBE["signal"]), neu(15))
-            b.add(draht(loch("a27"), loch("L-27"), FARBE["minus"], 2), neu(15))
+            b.add(draht(loch("a27"), loch("L-27"), FARBE["minus"], 4), neu(15))
         if t == 14:
             b.add('<text x="16" y="44" fill="#b8860b">Heute: grüne LED (Reihe 16) zum Fotowiderstand biegen</text>')
         return b.svg()
@@ -267,21 +267,21 @@ def tag_bild(t):
     b.add(nano(), n18)
     b.add(draht(loch("a12"), loch("L+12"), FARBE["plus"]), n18)      # 5V
     b.add(draht(loch("a14"), loch("L-14"), FARBE["minus"]), n18)     # GND
-    b.add(draht(loch("L+30"), loch("R+30"), FARBE["plus"], 2), n18)
-    b.add(draht(loch("L-29"), loch("R-29"), FARBE["minus"], 2), n18)
+    b.add(draht(loch("L+30"), loch("R+30"), FARBE["plus"], 4), n18)
+    b.add(draht(loch("L-29"), loch("R-29"), FARBE["minus"], 4), n18)
     for r, nano_loch, f, pin in ((17, "i8", "rot", "D5"), (19, "i7", "gelb", "D6"), (21, "i6", "gruen", "D7")):
         b.add(widerstand(f"e{r}", f"f{r}", "220 Ω"), n18)
         b.add(led(f"j{r}", f"R-{r}", FARBE[f]), n18)
         b.add(draht(loch(nano_loch), loch(f"a{r}"), PIN_FARBE[pin]), n18)
     b.add(empfaenger(23, antenne=True), n18)
-    b.add(draht(loch("L+23"), loch("a23"), FARBE["plus"], 2), n18)
+    b.add(draht(loch("L+23"), loch("a23"), FARBE["plus"], 4), n18)
     b.add(draht(loch("i11"), loch("a24"), PIN_FARBE["D2"]), n18)     # D2
-    b.add(draht(loch("a26"), loch("L-26"), FARBE["minus"], 2), n18)
+    b.add(draht(loch("a26"), loch("L-26"), FARBE["minus"], 4), n18)
     b.add(summer("f24", "f27"), n18)
     b.add(draht(loch("i4"), loch("j24"), PIN_FARBE["D9"]), n18)      # D9
-    b.add(draht(loch("j27"), loch("R-27"), FARBE["minus"], 2), n18)
+    b.add(draht(loch("j27"), loch("R-27"), FARBE["minus"], 4), n18)
     b.add(fotowiderstand("c28", "c29"), n18)
-    b.add(draht(loch("L+28"), loch("a28"), FARBE["plus"], 2), n18)
+    b.add(draht(loch("L+28"), loch("a28"), FARBE["plus"], 4), n18)
     b.add(draht(loch("a5"), loch("a29"), PIN_FARBE["A1"]), n18)      # A1
     b.add(widerstand("b29", "L-29", "10 kΩ"), n18)
     # Fernbedienung
