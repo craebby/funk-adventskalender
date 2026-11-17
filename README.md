@@ -4,6 +4,9 @@
 > lieber den Kalender unter **https://craebby.github.io/funk-adventskalender/** und schaut hier erst nach
 > Heiligabend rein.
 >
+> 🐞 Wer trotzdem schon alles durchgerattert hat und dabei einen Fehler findet: bitte als
+> [Issue](https://github.com/craebby/funk-adventskalender/issues) melden. Alles ist nach bestem Wissen und Gewissen gemacht, aber Fehler können sich einschleichen.
+>
 > 💛 Gefällt dir der Kalender? Über [GitHub Sponsors](https://github.com/sponsors/craebby) kannst du einen
 > Kaffee spendieren.
 
