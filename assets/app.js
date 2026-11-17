@@ -18,6 +18,9 @@ const SEITEN = {
   einkauf: { datei: "kalender/einkauf.md", titel: "Einkaufsliste" },
 };
 
+// Bei geaenderten Steckbildern hochzaehlen, damit Browser nicht die alte Fassung aus dem Cache zeigen
+const BILD_VERSION = 3;
+
 const SPEICHER = "funkadvent";
 
 function speicher() {
@@ -213,7 +216,7 @@ async function tagesseite() {
     const nr = String(n).padStart(2, "0");
     const fig = document.createElement("figure");
     fig.className = "steckbild";
-    fig.innerHTML = `<a href="bilder/tag${nr}.svg" target="_blank"><img src="bilder/tag${nr}.svg" ` +
+    fig.innerHTML = `<a href="bilder/tag${nr}.svg?v=${BILD_VERSION}" target="_blank"><img src="bilder/tag${nr}.svg?v=${BILD_VERSION}" ` +
       `alt="Steckbild für Türchen ${n}"></a><figcaption>Steckbild. Antippen zum Vergrößern. ` +
       `Gelb leuchtend = heute neu.</figcaption>`;
     const h1 = blatt.querySelector("h1");
