@@ -23,6 +23,8 @@ die Steckbilder aus `bilder/`.
   Ordner `/ (root)`. Adresse: `https://craebby.github.io/funk-adventskalender/`
 - **Lokal ansehen:** `python3 -m http.server 8642` im Repo, dann http://localhost:8642
 - **Steckbilder neu erzeugen** (nach Änderungen am Steckplan): `python3 tools/steckbilder.py`
+- **Steckbilder prüfen** (doppelt belegte oder verdeckte Löcher): `python3 tools/pruefe_steckbilder.py`,
+  alle Bilder auf einen Blick: `tools/uebersicht.html` im lokalen Server
 - **Werbetexte:** [werbung/texte.md](werbung/texte.md)
 
 ## Der Kalender zum Lesen

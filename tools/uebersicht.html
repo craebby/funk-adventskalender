@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Alle Steckbilder</title>
+  <style>
+    body { font-family: sans-serif; margin: 10px; background: #eee; }
+    .raster { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    img { width: 100%; background: #fff; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <div class="raster" id="r"></div>
+  <script>
+    const von = Number(new URLSearchParams(location.search).get("von") || 1);
+    const bis = Number(new URLSearchParams(location.search).get("bis") || 24);
+    for (let t = von; t <= bis; t++) {
+      const img = document.createElement("img");
+      img.src = `../bilder/tag${String(t).padStart(2, "0")}.svg?${Date.now()}`;
+      document.getElementById("r").appendChild(img);
+    }
+  </script>
+</body>
+</html>
