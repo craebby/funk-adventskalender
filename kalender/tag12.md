@@ -6,6 +6,7 @@
 
 Wieder der Sketch von Tag 8:
 [`tag08_offener_eingang.ino`](../sketches/tag08_offener_eingang/tag08_offener_eingang.ino), Seriellen Plotter auf.
+Der Uno bleibt am PC, alle Experimente finden am Schreibtisch statt.
 
 ## Experimente
 
@@ -15,7 +16,8 @@ Schau dir jedes Mal an, wie groß die Welle im Plotter wird:
 2. **Zu zweit:** Jemand fasst den Draht an, du fasst diese Person an der Hand.
 3. **Barfuß gegen Hausschuhe:** Macht das einen Unterschied?
 4. **Kurz gegen lang:** Erst einen kurzen Draht (10 cm), dann den langen (1 m).
-5. **Nah an der Lampe:** Stell dich mit dem Draht in der Hand neben eine Stehlampe.
+5. **Nah am Kabel:** Halt den Draht in der Hand und lege die andere Hand auf die Steckdosenleiste unterm Tisch
+   (nur außen auf das Gehäuse).
 
 ## Was passiert
 

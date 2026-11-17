@@ -16,14 +16,16 @@ auf dem Steckbrett darf stecken bleiben.
 
 ## Was passiert
 
-Im Plotter tanzt eine Kurve. Halt das freie Ende in die Nähe eines Netzkabels, einer Lampe oder einer
-Steckdosenleiste (nicht hinein!): Die Kurve wird zu einer schönen Welle. Zähl die Berge. Das Programm misst
+Für den Plotter bleibt der Uno heute am PC. Zum Glück gibt es am Schreibtisch genug Stromkabel. Im Plotter tanzt
+eine Kurve. Halt das freie Ende in die Nähe des Monitorkabels, der Schreibtischlampe oder der Steckdosenleiste
+unterm Tisch (nicht hinein!): Die Kurve wird zu einer schönen Welle. Zähl die Berge. Das Programm misst
 genau eine Zehntelsekunde, also siehst du fünf Berge: 50 pro Sekunde.
 
 ## Probier mal
 
 - Fass den Draht mit der Hand an. Was passiert?
-- Halt ihn an den Fernseher, den Kühlschrank, das Handy-Ladegerät.
+- Halt ihn an das Laptop-Netzteil, das Handy-Ladegerät, das Kabel der Schreibtischlampe. Mit einem längeren
+  Draht (2–3 m) erreichst du auch Geräte, die nicht auf dem Tisch stehen.
 
 ## Übrigens
 
