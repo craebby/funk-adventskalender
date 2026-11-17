@@ -109,12 +109,15 @@ def taster(r1, r2):
 
 
 def summer(plus, minus):
+    """Beine waagerecht: + in Spalte i, − direkt in die rechte Minus-Schiene. Das Gehaeuse (12 mm)
+    liegt dann ueber i, j und der Schiene und verdeckt keine Loecher, in die Kabel muessen."""
     (x1, y1), (x2, y2) = loch(plus), loch(minus)
-    return (f'<circle cx="{x1 + 18}" cy="{(y1 + y2) / 2}" r="{(y2 - y1) / 2 + 2}" fill="#222" stroke="#000"/>'
-            f'<circle cx="{x1 + 18}" cy="{(y1 + y2) / 2}" r="3" fill="#666"/>'
-            f'<text x="{x1 + 18}" y="{y1 - 10}" text-anchor="middle" font-size="9">Summer (passiv) +</text>'
-            f'<line x1="{x1}" y1="{y1}" x2="{x1 + 10}" y2="{y1 + 4}" stroke="#777" stroke-width="2"/>'
-            f'<line x1="{x2}" y1="{y2}" x2="{x2 + 10}" y2="{y2 - 4}" stroke="#777" stroke-width="2"/>')
+    mx = (x1 + x2) / 2
+    return (f'<circle cx="{mx}" cy="{y1}" r="30" fill="#222" stroke="#000" opacity="0.82"/>'
+            f'<circle cx="{mx}" cy="{y1}" r="4" fill="#777"/>'
+            f'<circle cx="{x1}" cy="{y1}" r="3" fill="#ffd54f"/><circle cx="{x2}" cy="{y2}" r="3" fill="#ffd54f"/>'
+            f'<text x="{x1 - 2}" y="{y1 - 6}" fill="#fff" font-size="10" font-weight="bold">+</text>'
+            f'<text x="{mx + 34}" y="{y1 + 4}" font-size="9">Summer (passiv)</text>')
 
 
 def fotowiderstand(h1, h2):
@@ -135,8 +138,9 @@ def poti(reihen):
 def ultraschall():
     x1, y1 = loch("i2")
     _, y2 = loch("i5")
-    bx = x1 + 6
-    return (f'<rect x="{bx}" y="{y1 - 10}" width="60" height="{y2 - y1 + 20}" rx="3" fill="#1976d2" stroke="#0d47a1"/>'
+    bx = x("R+") + 14   # steht senkrecht auf den Stiften, hier daneben gezeichnet
+    return ("".join(f'<line x1="{x1}" y1="{loch(f"i{r}")[1]}" x2="{bx}" y2="{loch(f"i{r}")[1]}" stroke="#90a4ae" stroke-width="1.5" stroke-dasharray="3 2"/>' for r in range(2, 6)) +
+            f'<rect x="{bx}" y="{y1 - 10}" width="60" height="{y2 - y1 + 20}" rx="3" fill="#1976d2" stroke="#0d47a1"/>'
             f'<circle cx="{bx + 22}" cy="{y1 + 4}" r="9" fill="#cfd8dc" stroke="#607d8b"/>'
             f'<circle cx="{bx + 22}" cy="{y2 - 4}" r="9" fill="#cfd8dc" stroke="#607d8b"/>'
             f'<text x="{bx + 64}" y="{y1 + 4}" font-size="9">HC-SR04</text>'
@@ -209,8 +213,8 @@ def tag_bild(t):
 
     if t <= 17:
         b.add(uno())
-        b.add(uno_draht("5V", "L+3", FARBE["plus"]), neu(1))
-        b.add(uno_draht("GND", "L-4", FARBE["minus"]), neu(1))
+        b.add(uno_draht("5V", "L+1", FARBE["plus"]), neu(1))
+        b.add(uno_draht("GND", "L-1", FARBE["minus"]), neu(1))
         b.add(draht(loch("L+30"), loch("R+30"), FARBE["plus"], 4), neu(1))
         b.add(draht(loch("L-29"), loch("R-29"), FARBE["minus"], 4), neu(1))
         # Kerze 1
@@ -230,9 +234,8 @@ def tag_bild(t):
             b.add(uno_draht("Pin 3", "a20", FARBE["signal"]), neu(4))
             b.add(draht(loch("a22"), loch("L-22"), FARBE["minus"], 4), neu(4))
         if t >= 5:
-            b.add(summer("f25", "f28"), neu(5))
-            b.add(uno_draht("Pin 9", "j25", FARBE["signal"]), neu(5))
-            b.add(draht(loch("j28"), loch("R-28"), FARBE["minus"], 4), neu(5))
+            b.add(uno_draht("Pin 9", "f25", FARBE["signal"]), neu(5))
+            b.add(summer("i25", "R-25"), neu(5))
         if t >= 6:
             b.add(fotowiderstand("c17", "c18"), neu(6))
             b.add(draht(loch("L+17"), loch("a17"), FARBE["plus"], 4), neu(6))
@@ -278,13 +281,12 @@ def tag_bild(t):
     b.add(draht(loch("L+23"), loch("a23"), FARBE["plus"], 4), n18)
     b.add(draht(loch("i11"), loch("a24"), PIN_FARBE["D2"]), n18)     # D2
     b.add(draht(loch("a26"), loch("L-26"), FARBE["minus"], 4), n18)
-    b.add(summer("f24", "f27"), n18)
-    b.add(draht(loch("i4"), loch("j24"), PIN_FARBE["D9"]), n18)      # D9
-    b.add(draht(loch("j27"), loch("R-27"), FARBE["minus"], 4), n18)
+    b.add(draht(loch("i4"), loch("f24"), PIN_FARBE["D9"]), n18)      # D9
+    b.add(summer("i24", "R-24"), n18)
     b.add(fotowiderstand("c28", "c29"), n18)
     b.add(draht(loch("L+28"), loch("a28"), FARBE["plus"], 4), n18)
     b.add(draht(loch("a5"), loch("a29"), PIN_FARBE["A1"]), n18)      # A1
-    b.add(widerstand("b29", "L-29", "10 kΩ"), n18)
+    b.add(widerstand("b29", "L-28", "10 kΩ"), n18)
     # Fernbedienung
     fx, fy = 540, 120
     fb = (f'<rect x="{fx}" y="{fy}" width="150" height="190" rx="8" fill="#00838f"/>'
@@ -305,8 +307,8 @@ def tag_bild(t):
         py = pins[p]
         fb += (f'<path d="M{fx + 156},{py} l40,8 l12,0" stroke="{farbe}" stroke-width="3" fill="none"/>'
                f'<circle cx="{fx + 208}" cy="{py + 8}" r="3" fill="#bbb"/>')
-    fb += (f'<text x="{fx + 214}" y="{fy + 152}" font-size="9">Taste 1: Pin 3 an GND tippen</text>'
-           f'<text x="{fx + 214}" y="{fy + 172}" font-size="9">Taste 2: Pin 4 an GND tippen</text>')
+    fb += (f'<text x="{fx + 214}" y="{fy + 152}" font-size="9">Taste 1: Pin 3 an GND</text>'
+           f'<text x="{fx + 214}" y="{fy + 172}" font-size="9">Taste 2: Pin 4 an GND</text>')
     b.add(fb, n18)
     return b.svg()
 

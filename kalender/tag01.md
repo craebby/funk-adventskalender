@@ -6,9 +6,10 @@ Heute leuchtet etwas, ganz ohne Programm. Der Uno ist erst mal nur eine Steckdos
 
 ## Aufbau
 
-1. Steckbrücke vom Uno-Anschluss **5V** in die linke rote **+**-Schiene, eine zweite von **GND** in die linke
-   blaue **−**-Schiene.
-2. Die Schienen auf die rechte Seite verlängern: linke + mit rechter +, linke − mit rechter −. Das bleibt den
+1. Steckbrücke vom Uno-Anschluss **5V** ganz oben (Reihe 1) in die linke rote **+**-Schiene, eine zweite von
+   **GND** ganz oben in die linke blaue **−**-Schiene.
+2. Die Schienen ganz unten auf die rechte Seite verlängern: linke + mit rechter + (Reihe 30), linke − mit
+   rechter − (Reihe 29). Das bleibt den
    ganzen Monat so.
 3. Widerstand 220 Ω von **e10** nach **f10**, über den Graben.
 4. Rote LED: **langes Bein in j10**, kurzes Bein direkt daneben in die rechte **−**-Schiene.

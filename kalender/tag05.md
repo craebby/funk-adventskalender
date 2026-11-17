@@ -7,8 +7,9 @@ Platine, der **aktive** ist unten schwarz vergossen und hat oft einen Aufkleber.
 
 ## Aufbau
 
-Den **passiven** Summer: längeres Bein (+) in **f25**, kürzeres Bein in die Reihe, die zum Abstand passt,
-z. B. **f28**. Pin 9 → j25, j28 → rechte −.
+Den **passiven** Summer quer stecken: das längere Bein (+) in **i25**, das kürzere direkt in die rechte blaue
+**−**-Schiene in derselben Reihe. Das Gehäuse liegt dann über dem Rand des Steckbretts und verdeckt nichts. Dazu eine
+Steckbrücke von **Pin 9** nach **f25**.
 
 ## Programm
 
