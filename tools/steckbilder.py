@@ -46,7 +46,8 @@ class Bild:
     def svg(self):
         kopf = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {BREITE} {HOEHE}" '
                 f'font-family="sans-serif" font-size="11">'
-                '<defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%">'
+                # userSpaceOnUse: sonst verschwinden waagerechte Kabel (Hoehe 0) mitsamt Filter
+                f'<defs><filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="{BREITE}" height="{HOEHE}">'
                 '<feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#ffd400" flood-opacity="1"/>'
                 '</filter></defs>'
                 f'<rect width="{BREITE}" height="{HOEHE}" fill="#fafafa"/>'
