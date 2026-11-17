@@ -1,7 +1,6 @@
 # Texte zum Bekanntmachen
 
-Platzhalter `LINK` durch die Adresse der Seite ersetzen (nach dem Freischalten von GitHub Pages:
-`https://craebby.github.io/funk-adventskalender/`).
+`LINK` = **https://craebby.github.io/funk-adventskalender/** (seit 17.11.2026 online)
 
 ## Kurz (Mastodon, Fediverse, X, Bluesky, WhatsApp-Status)
 
