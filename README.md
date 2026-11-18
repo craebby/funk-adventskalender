@@ -172,7 +172,7 @@ Feste Pins, beim Uno und beim Nano gleich:
 | Tag | Experiment | Was passiert | Sketch |
 |---|---|---|---|
 | 15 | **So klingt Funkstille** | Den 433-MHz-Empfänger einstecken und auf den Summer schalten: Er rauscht. Der Empfänger dreht so lange auf, bis er das Rauschen hört. | `tag15_rauschen` |
-| 16 | **Wer funkt denn hier?** | Der Arduino lauscht auf 433 MHz. Wer eine Funkklingel, ein Funkthermometer oder eine alte Fernbedienung hat: drücken und den Code sehen. Wenn nichts kommt, ist auch das ein Ergebnis: Übermorgen funken wir selbst. | `tag16_funklauscher` |
+| 16 | **Wer funkt denn hier?** | Der Arduino lauscht ohne Bibliothek auf Funk-Thermometer in der Nachbarschaft und liest Temperatur und Feuchte aus den Bits (Nexus- und inFactory-Format, getestet 18.11. mit Abgleich gegen rtl_433). Bonus: Fernbedienungen mit der Bibliothek rc-switch mitlesen. | `tag16_wetterlauscher` |
 | 17 | **Eine Antenne bauen** | Zwei Drähte, je 17,3 cm: ein Viertel der Wellenlänge bei 433 MHz. Durch das Loch „ANT“ an Sender und Empfänger stecken und verdrillen. Mit dem Sketch von Tag 15 hören: Mit Antenne ändert sich das Rauschen, und ein telefonierendes Handy daneben knattert hinein. | `tag15_rauschen` |
 | 18 | **Der eigene Sender** | Umzug: Der Nano zieht ins Steckbrett und übernimmt den Empfänger. Der Uno bekommt den Sender an drei Kabeln und zwei Drahttasten. Pin-3-Draht an GND tippen: Auf dem Bildschirm des Nano steht 2412. Der erste eigene Funkspruch. | Uno: `tag18_fernbedienung`, Nano: `tag16_funklauscher` |
 | 19 | **Die Keksdose als Funkbunker** | Wie gestern. Den Uno samt Sender in Alufolie wickeln oder in eine Keksdose legen: Funkstille. Ein Faradayscher Käfig, wie im Auto oder im Aufzug. Und Holz, Wasser, die Hand? Und ohne Antenne? | wie Tag 18 |

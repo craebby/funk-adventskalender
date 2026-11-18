@@ -20,7 +20,8 @@ Die Kerze von gestern darfst du wieder geradebiegen.
 ## Was passiert
 
 Es rauscht. Der Summer gibt direkt wieder, was der Empfänger hört, und das ist: nichts, nur Rauschen. Im
-Seriellen Plotter siehst du, wie oft der Empfänger pro Zehntelsekunde zwischen 0 und 1 springt.
+Seriellen Plotter siehst du, wie oft der Empfänger pro Zehntelsekunde zwischen 0 und 1 springt. Bei reinem
+Rauschen sind das ein paar Hundert Mal, die Zahl zappelt etwa zwischen 250 und 450.
 
 ## Übrigens
 

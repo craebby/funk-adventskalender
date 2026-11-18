@@ -20,10 +20,10 @@ Ziel: jeden Tag einmal echt aufbauen, bevor der Kalender beworben wird. Ergebnis
 | 1 | LED leuchtet ohne Programm | rote LED an | ✅ 17.11. 220 Ω aus Fritzing-Kiste, LED eher schwach. Brett: links + außen, rechts + innen → Farbhinweis ergänzt |
 | 2 | Blink-Sketch, `delay(20)` | Blinken, ab ca. 20 ms Dauerleuchten | ✅ 17.11. |
 | 3 | drei Kerzen | rot/gelb flackern weich, grün springt an/aus | ✅ 17.11. |
-| 4 | Taster schaltet um | Druck = an, Druck = aus | |
+| 4 | Taster schaltet um | Druck = an, Druck = aus | ✅ 17.11. |
 | 5 | Jingle Bells, dann aktiver Summer | Melodie, aktiver schnarrt nur. **Summer quer (i25/Minus-Schiene) passt?** | ✅ 17.11. Aktiver Summer spielt die Melodie auch, nur kratzig. Piezo-Scheibe als Ersatz für den passiven klappt prima → Text angepasst |
-| 6 | Licht-Theremin | Ton folgt der Hand | |
-| 7 | Nachtlicht, Wert `DUNKEL` | Kerzen gehen bei Dunkelheit an. Optional: `uebrigens_lampenflackern` zeigt 100 Hz? **(prüfen)** | |
+| 6 | Licht-Theremin | Ton folgt der Hand | ✅ 17.11. |
+| 7 | Nachtlicht, Wert `DUNKEL` | Kerzen gehen bei Dunkelheit an. Optional: `uebrigens_lampenflackern` zeigt 100 Hz? **(prüfen)** | ✅ 17.11. |
 | 8 | offener Eingang im Plotter | Welle + Staerke | ⚠️ 17.11. Mit 1 m Draht übersteuert (Ruhe 800–1000). Mit kurzer Steckbrücke: Ruhe ~170, seitlich nähern 200–250, Isolierung 350, Spitze antippen 700+. Sketch auf Welle/Staerke umgebaut, Text angepasst |
 | 9 | Brumm-Melder am Schreibtisch | Hand nähern piept, Verlängerungskabel eingesteckt piept, ausgesteckt still | ✅ 17.11. Wandsuche unpraktisch → zum Brumm-Melder am Schreibtisch umgebaut, klappt |
 | 10 | Knacks-Detektor am Schreibtisch | Schalter neben dem Draht → Knacks | ⚠️ 17.11. Mit kurzer Steckbrücke nichts. Mit 50 cm Draht und Poti fast bis kein Auslösen in Ruhe: Aktenvernichter und Schalter der Schreibtischlampe knacken → Text angepasst |
@@ -31,8 +31,8 @@ Ziel: jeden Tag einmal echt aufbauen, bevor der Kalender beworben wird. Ergebnis
 | 12 | Morse-Übersetzer (neu 17.11.) | Taster piept, Monitor zeigt `... = S`. **(prüfen: Tempo LANG 250 ms passt?)** | |
 | 13 | Radar-Wächter (neu 17.11.) | Freie Strecke wird gemessen, Durchlaufen zählt als Besuch. **(prüfen: Reichweite, Fehlalarme)** | |
 | 14 | Zahlen per Licht | „Stimmt!“ **(prüfen: Tempo, LDR-Trägheit)** | |
-| 15 | Rauschen des Empfängers | Summer rauscht, Plotter zappelt | |
-| 16 | rc-switch lauscht | eigene Fernbedienung/Klingel zeigt Code, sonst nichts | |
+| 15 | Rauschen des Empfängers | Summer rauscht, Plotter zappelt | ✅ 18.11. 250–450 Wechsel pro 0,1 s |
+| 16 | Wetterlauscher (neu 18.11., ohne Bibliothek) | Thermometer der Nachbarschaft mit Temperatur | ✅ 18.11. Nach mehreren Runden: Störpulse überspringen, Auswertung an jeder Stelle, inFactory mit CRC. Nexus-T 70 und inFactory 56 kommen regelmäßig, Werte passen zu rtl_433. Ohne Antenne nichts. Bonus rc-switch mit Flipper (Princeton) kommt an ✅ |
 | 17 | Antennen 17,3 cm | Rauschen ändert sich | |
 | 18 | Umbau, Nano empfängt 2412 | **Platzprobe Nano auf dem Steckbrett, Pinbelegung wie im Steckplan?** | |
 | 19 | Alufolie, Keksdose | Keksdose = Funkstille | |
