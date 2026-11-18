@@ -20,7 +20,9 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > morst mit einem Arduino, der live übersetzt, liest die Funk-Thermometer der Nachbarschaft mit und lauschst der
 > Atomuhr. An Heiligabend steuerst du deinen Weihnachtsbaum per Funk.
 >
-> Kein Löten. Kein Vorwissen. Kostenlos und offen. Teile ab ca. 40 €.
+> Kein Löten. Kein Vorwissen. Kostenlos und offen. Vieles liegt vielleicht schon in der Bastelkiste, eine
+> Materialliste ist dabei. Wer nicht suchen mag: fertige Sets für zusammen rund 40 €, und alle Teile kann man
+> danach weiter verwenden.
 >
 > 👉 LINK
 >
@@ -44,9 +46,11 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 >
 > Getestet: Ich habe alle Tage selbst nachgebaut, mit Teilen aus der Bastelkiste.
 >
-> **Was brauche ich?** Einen Arduino Uno und Nano, ein Steckbrett, ein paar Bauteile und ein 433-MHz-Set.
-> Neu gekauft etwa 40 €, wer eine Bastelkiste hat, braucht oft nur das Funkset. Nichts wird gelötet,
-> alles läuft mit 5 V aus dem USB.
+> **Was brauche ich?** Ein Arduino Uno und ein Nano, ein Steckbrett, ein paar Bauteile und ein 433-MHz-Set. Eine
+> komplette Materialliste liegt dem Kalender bei, vieles hat man vielleicht schon herumliegen. Wer keine Lust
+> auf Suchen hat, findet Vorschläge für fertige Sets, im schlimmsten Fall sind das zusammen rund 40 €. Nichts wird
+> gelötet oder zerstört, alles läuft mit 5 V aus dem USB, und mit den Teilen kann man danach noch viel mehr
+> basteln.
 >
 > **Für wen?** Für Neugierige ab etwa 10 Jahren (mit etwas Hilfe), für Familien, Jugendgruppen, Schul-AGs,
 > und für alle, die schon immer mal wissen wollten, wie Funk eigentlich funktioniert. Zwischendurch gibt's
@@ -74,7 +78,9 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > Am 24. Dezember gibt es einen Ausblick auf die Klasse N mit Hinweis auf **50ohm.de** und den nächsten OV.
 >
 > Ideal für Jugendabende, als Geschenk mit Einladung zum OV-Abend oder als Bausatz-Aktion im Verein.
-> Material ab ca. 40 € pro Person, alles offen unter MIT-Lizenz.
+> Eine Materialliste liegt bei, vieles findet sich in jeder Bastelkiste. Wer lieber komplett kauft, kommt mit
+> den vorgeschlagenen Sets auf rund 40 € pro Person. Alle Teile bleiben danach heil und weiter verwendbar. Alles
+> offen unter MIT-Lizenz.
 
 ## Ein Satz für Leute ohne Bastelerfahrung
 
