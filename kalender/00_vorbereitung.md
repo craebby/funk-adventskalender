@@ -16,11 +16,15 @@ musst sie nur kopieren und hochladen.
 4. **Testen.** Datei → Beispiele → 01.Basics → Blink öffnen und auf den Pfeil (Hochladen) klicken. Die kleine
    LED „L“ auf dem Uno blinkt. Geschafft.
 
+Ab Tag 18 kommt ein Nano dazu. Wie du ihn auswählst, steht dort Schritt für Schritt.
+
 ## Wie du jeden Tag arbeitest
 
 - **Aufbauen** nach der Anleitung des Tages. Immer erst den USB-Stecker ziehen, dann umstecken, dann wieder
   einstecken.
-- **Sketch öffnen:** Den Code des Tages kopieren, in der IDE Datei → Neu, alles markieren und ersetzen.
+- **Sketch öffnen:** Den Code des Tages kopieren, in der IDE **Datei → Neu**, alles markieren und ersetzen.
+  Wichtig ist das „Neu“: Fügst du den Code in ein schon offenes Projekt ein, überschreibst du es beim Speichern.
+  Stehen oben mehrere Reiter (zum Beispiel `alarm.h`, `config.h`), bist du in einem anderen Projekt.
 - **Hochladen:** auf den Pfeil klicken. Unten steht „Hochladen abgeschlossen“.
 - **Serieller Monitor** (Lupe oben rechts): Hier schreibt der Arduino Text. Unten rechts **115200 Baud**
   einstellen, sonst siehst du nur Zeichensalat.

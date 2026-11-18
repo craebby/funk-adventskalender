@@ -55,7 +55,8 @@ void loop() {
   if (funk.available()) {
     unsigned long code = funk.getReceivedValue();
     funk.resetAvailable();
-    if (code == 2412) { perFunkAn = !perFunkAn; delay(400); }
+    static unsigned long zuletztGeschaltet = 0;   // der Sender wiederholt jeden Code, Doppelte ignorieren
+    if (code == 2412 && millis() - zuletztGeschaltet > 1000) { perFunkAn = !perFunkAn; zuletztGeschaltet = millis(); }
     if (code >= 100000UL) {                       // ein Buchstabe der Funk-Postkarte (Tag 21)
       static int letzte = -1;
       int position = (code - 100000UL) / 256;
@@ -65,7 +66,8 @@ void loop() {
         letzte = position;
       }
     }
-    if (code == 2512) { Serial.println(); jingleBells(); }
+    static unsigned long zuletztMusik = 0;
+    if (code == 2512 && millis() - zuletztMusik > 3000) { Serial.println(); jingleBells(); zuletztMusik = millis(); }
   }
   bool dunkel = analogRead(LICHT) < DUNKEL;
   kerzen(perFunkAn || dunkel);

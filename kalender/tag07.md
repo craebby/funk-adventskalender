@@ -25,4 +25,4 @@ drüberhältst. Stell `DUNKEL` genau dazwischen. Das brauchst du an Heiligabend 
 Viele LED-Lampen flackern, 100-mal pro Sekunde, viel zu schnell für das Auge (erinnerst du dich an Tag 2?). Mit
 [`uebrigens_lampenflackern.ino`](../sketches/uebrigens_lampenflackern/uebrigens_lampenflackern.ino) und dem
 Seriellen Plotter kannst du versuchen, das sichtbar zu machen. Ob der Fotowiderstand dafür schnell genug ist,
-hängt von der Lampe ab. **(prüfen)**
+hängt von der Lampe ab. Probier verschiedene Lampen aus.

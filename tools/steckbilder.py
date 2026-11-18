@@ -312,10 +312,15 @@ def tag_bild(t):
     b.add(draht(loch("a26"), loch("L-26"), FARBE["minus"], 4), n18)
     b.add(draht(loch("i4"), loch("f24"), PIN_FARBE["D9"]), n18)      # D9
     b.add(summer("i24", "R-24"), n18)
-    b.add(fotowiderstand("c28", "c29"), n18)
-    b.add(draht(loch("L+28"), loch("a28"), FARBE["plus"], 4), n18)
-    b.add(draht(loch("a5"), loch("a29"), PIN_FARBE["A1"]), n18)      # A1
-    b.add(widerstand("b29", "L-28", "10 kΩ"), n18)
+    if t >= 24:                                                       # Lichtsensor erst zum Finale
+        n24 = neu(24)
+        b.add(fotowiderstand("c28", "c29"), n24)
+        b.add(draht(loch("L+28"), loch("a28"), FARBE["plus"], 4), n24)
+        (ax5, ay5), (ax29, ay29) = loch("a5"), loch("a29")
+        bx = x("L+") - 34                                             # A1-Kabel links aussen am Brett vorbei
+        b.add(f'<path d="M{ax5},{ay5} C{bx},{ay5} {bx},{ay29} {ax29},{ay29}" fill="none" '
+              f'stroke="{PIN_FARBE["A1"]}" stroke-width="3" stroke-linecap="round" opacity="0.9"/>', n24)   # A1
+        b.add(widerstand("b29", "L-28", "10 kΩ"), n24)
     # Fernbedienung
     fx, fy = 540, 120
     fb = (f'<rect x="{fx}" y="{fy}" width="150" height="190" rx="8" fill="#00838f"/>'

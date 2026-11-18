@@ -1,6 +1,17 @@
 # 24. Dezember: Der funkgesteuerte Weihnachtsbaum
 
-**Heute neu:** ein Stück Schoki. Du hast es dir verdient.
+**Heute neu:** ein Stück Schoki. Du hast es dir verdient. Und der Fotowiderstand von Tag 6 kommt zurück.
+
+## Aufbau
+
+Der Fotowiderstand zieht wieder ein, damit der Baum merkt, wann es dunkel wird:
+
+- Fotowiderstand mit den Beinen in **c28** und **c29**.
+- Steckbrücke von der linken **+**-Schiene nach **a28**.
+- Widerstand 10 kΩ (braun-schwarz-orange) von **b29** schräg in die linke **−**-Schiene (Reihe 28, denn in
+  Reihe 29 steckt schon die Brücke nach rechts).
+- Steckbrücke vom Nano-Anschluss **A1** (Loch a5) nach **a29**. Am besten links außen am Brett vorbei, wie im
+  Steckbild.
 
 ## Programm
 

@@ -11,7 +11,7 @@
 ## Was passiert
 
 Taste 2 (Pin 4 an GND): Beim Nano erscheint Buchstabe für Buchstabe **FROHE WEIHNACHTEN!**. Ein „?“ heißt: Da ist
-ein Buchstabe unterwegs verloren gegangen. **(prüfen: ob alle ankommen)**
+ein Buchstabe unterwegs verloren gegangen.
 
 ## Probier mal: Dein eigener Gruß
 

@@ -19,7 +19,8 @@ langen Lücken steckt die Uhrzeit, als Nullen und Einsen.
 
 Mit einem DCF77-Modul empfängt der Arduino die Atomuhr selbst und zeigt nach einer Minute die Uhrzeit:
 [`tag23_atomuhr_modul.ino`](../sketches/tag23_atomuhr_modul/tag23_atomuhr_modul.ino). Anschluss steht im Sketch.
-Achtung: Die meisten Module vertragen nur **3,3 V**, nicht 5 V. **(prüfen: Modul und Pegel)**
+Achtung: Die meisten Module vertragen nur **3,3 V**, nicht 5 V. Dieser Teil ist noch nicht mit jedem Modul
+ausprobiert. Wenn es bei dir klappt oder hakt, freue ich mich über eine Rückmeldung.
 
 ## Übrigens
 

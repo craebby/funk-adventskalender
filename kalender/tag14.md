@@ -20,7 +20,6 @@ Fotowiderstand zählt die Blitze mit. Im Monitor steht „Gesendet: 7, Empfangen
 
 - Röhrchen weg, Zimmerlicht an: Gibt es Fehler?
 - Im Programm `delay(150)` und `delay(250)` kleiner machen. Wie schnell geht es, bevor Fehler kommen?
-  **(prüfen: Tempo)**
 
 ## Übrigens
 

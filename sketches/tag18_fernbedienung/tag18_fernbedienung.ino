@@ -33,15 +33,23 @@ void sende(unsigned long code) {
 
 void sendeGruss() {
   // Jeder Buchstabe bekommt seine Nummer dazu, damit der Empfaenger Wiederholungen erkennt:
-  // Code = 100000 + Position * 256 + Buchstabe
+  // Code = 100000 + Position * 256 + Buchstabe. Buchstaben nur dreimal wiederholen, sonst dauert es zu lange.
+  funk.setRepeatTransmit(3);
   for (unsigned int i = 0; i < strlen(GRUSS); i++) {
     sende(100000UL + i * 256UL + (unsigned char)GRUSS[i]);
-    delay(80);
+    delay(40);
   }
+  funk.setRepeatTransmit(6);
   sende(2512);
 }
 
+void warteAufLoslassen() {
+  while (digitalRead(TASTER1) == LOW || digitalRead(TASTER2) == LOW) delay(10);
+  delay(200);
+}
+
 void loop() {
-  if (digitalRead(TASTER1) == LOW) { sende(2412); delay(300); }
-  if (digitalRead(TASTER2) == LOW) { sendeGruss(); delay(300); }
+  // Nach dem Senden warten, bis die "Taste" wieder losgelassen ist. So funkt ein Antippen nur einmal.
+  if (digitalRead(TASTER1) == LOW) { sende(2412); warteAufLoslassen(); }
+  if (digitalRead(TASTER2) == LOW) { sendeGruss(); warteAufLoslassen(); }
 }

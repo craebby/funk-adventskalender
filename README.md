@@ -19,8 +19,10 @@ selbst gebaute Funkfernbedienung den Weihnachtsbaum aus dem Nebenzimmer und schi
 Der rote Faden: Um uns herum ist ständig etwas unterwegs, das man nicht sieht. Der Brumm aus der Steckdose, Funken
 beim Lichtschalten, Ultraschall, Funksignale, die Atomuhr. Der Kalender macht das hör- und sichtbar.
 
-**Stand der Prüfung:** Alle 20 Sketches kompilieren für Arduino Uno und Nano (PlatformIO, 17.11.2026). Auf echter
-Hardware getestet ist noch nichts. Heikle Tage sind mit **(prüfen)** markiert.
+**Stand der Prüfung:** Alle Sketches kompilieren für Uno und Nano. Vom 17. bis 18.11.2026 wurde der Kalender mit
+eigenen Teilen komplett nachgebaut (Uno R3, Nano-Nachbau mit CH340, großes Steckbrett) und dabei an vielen Stellen
+verbessert. Details und Messwerte stehen in [TESTPLAN.md](TESTPLAN.md). Noch nicht mit Hardware geprüft: das
+optionale DCF77-Modul (Tag 23) und die Keksdose (Tag 19).
 
 ## Die Webseite
 
@@ -153,7 +155,7 @@ Feste Pins, beim Uno und beim Nano gleich:
 | 4 | **Licht per Knopf** | Der Taster schaltet die Kerze an und aus. | `tag04_taster` |
 | 5 | **Jingle Bells** | Der passive Summer spielt die Melodie. Dann den aktiven Summer einstecken: Er schnarrt oder spielt schräg, weil er seinen eigenen Tongeber hat. So lernt man den Unterschied. | `tag05_melodie` |
 | 6 | **Nikolaus: Das Licht-Theremin** | Hand über den Fotowiderstand: Je dunkler, desto tiefer der Ton. Mit der Handy-Taschenlampe spielen. | `tag06_lichttheremin` |
-| 7 | **Das Nachtlicht** | Wird es dunkel, gehen die Kerzen von selbst an. Das braucht das Finale wieder. Übrigens für Neugierige: Mit `uebrigens_lampenflackern` im Seriellen Plotter nachsehen, ob die LED-Lampen im Haus flackern. **(prüfen: ob der Fotowiderstand dafür schnell genug ist)** | `tag07_nachtlicht` |
+| 7 | **Das Nachtlicht** | Wird es dunkel, gehen die Kerzen von selbst an. Das braucht das Finale wieder. Übrigens für Neugierige: Mit `uebrigens_lampenflackern` im Seriellen Plotter nachsehen, ob die LED-Lampen im Haus flackern. | `tag07_nachtlicht` |
 
 ### Woche 2: Unsichtbare Felder
 
@@ -165,7 +167,7 @@ Feste Pins, beim Uno und beim Nano gleich:
 | 11 | **Das Ultraschall-Theremin** | Der Ultraschall-Sensor ruft Töne, die zu hoch für unsere Ohren sind, und lauscht auf das Echo, wie eine Fledermaus. Die Hand darüber auf und ab bewegen: Der Summer spielt dazu. | `tag11_ultraschalltheremin` |
 | 12 | **Der Morse-Übersetzer** | Der Taster wird zur Morsetaste, der Summer piept, und der Arduino übersetzt live in Buchstaben im Seriellen Monitor. Kein Morse-Lernen, ein Spickzettel genügt: SOS, den eigenen Namen tippen. Bonus: echte Morsezeichen von Funkamateuren auf dem WebSDR (7020 kHz, CW). | `tag12_morseuebersetzer` |
 | 13 | **Der Radar-Wächter** | Der Ultraschall-Sensor misst die freie Strecke durchs Zimmer und meldet jeden, der durch den Strahl läuft, mit Abstand und Zeit. Radar macht dasselbe mit Funkwellen, Funkamateure sogar mit dem Mond als Spiegel. | `tag13_radarwaechter` |
-| 14 | **Zahlen per Licht** | Die LED blitzt eine Zahl, der Fotowiderstand zählt mit. An, aus, an, aus: So funktioniert ab morgen auch der Funk. **(prüfen: Tempo)** | `tag14_lichtfunk` |
+| 14 | **Zahlen per Licht** | Die LED blitzt eine Zahl, der Fotowiderstand zählt mit. An, aus, an, aus: So funktioniert ab morgen auch der Funk. | `tag14_lichtfunk` |
 
 ### Woche 3: Echter Funk auf 433 MHz
 
@@ -184,7 +186,7 @@ Feste Pins, beim Uno und beim Nano gleich:
 | Tag | Experiment | Was passiert | Sketch |
 |---|---|---|---|
 | 22 | **Wie falsch geht der Arduino?** | Der Arduino zählt die Zeit seit dem Start. Zur vollen Minute starten, nach ein paar Stunden mit time.is vergleichen: Er geht falsch, oft um mehrere Sekunden pro Stunde. Genau dafür gibt es Funkuhren. | `tag22_arduinouhr` |
-| 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach einer Minute die Uhrzeit. **(prüfen: Pegel des Moduls)** | optional `tag23_atomuhr_modul` |
+| 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach einer Minute die Uhrzeit. | optional `tag23_atomuhr_modul` |
 | 24 | **Finale: Der funkgesteuerte Weihnachtsbaum** | Taste 1 schaltet die Kerzen, Taste 2 schickt den Gruß und spielt Jingle Bells, und bei Dunkelheit gehen die Kerzen von selbst an. Bonus mit SDR-Stick: den eigenen Sender als Strich im Wasserfall sehen. | Nano: `tag24_finale` |
 
 ### Amateurfunk als roter Faden
@@ -228,12 +230,9 @@ An den übrigen Tagen wird nur umgebaut.
   Die aktuelle Fassung vor der Veröffentlichung bei der Bundesnetzagentur nachlesen. Im Text: Sender mit 5 V
   betreiben, nur auf Tastendruck senden, keine fremden Geräte anfunken.
 
-## Offene Punkte vor dem Veröffentlichen
+## Offene Punkte
 
-1. Das Miuzei-Kit und die Nanos einmal in der Hand haben und den Inhalt gegen die Liste prüfen.
-2. Platzprobe: Passen Nano, Empfänger, drei LEDs, Summer und Fotowiderstand zusammen auf das 400er-Steckbrett?
-   Wenn nicht, die Kerzen auf zwei reduzieren. **(prüfen)**
-3. Alles einmal auf echter Hardware aufbauen, besonders die (prüfen)-Tage 7, 10, 14 und 23.
-4. Die Funk-Postkarte (Tag 21) testen: Kommen alle Buchstaben an, oder muss der Uno langsamer funken?
-5. Fotos oder Fritzing-Bilder für jeden Tag.
-6. Texte im Plauderton schreiben, jeder Tag mit einem „Übrigens“.
+1. DCF77-Modul (Tag 23) mit echtem Modul prüfen.
+2. Platzprobe des Nano im 400er-Steckbrett des Miuzei-Kits (getestet wurde mit einem großen Brett und einem per
+   Kabel angeschlossenen Nano).
+3. Fotos der Aufbauten für die Tagesseiten.

@@ -54,7 +54,7 @@ und gibt ihn an die Antenne weiter.
 
 - Zähl die Berge der Welle: Acht Punkte ergeben einen Berg, das sind 50 Berge pro Sekunde.
 - Leg ein eingestecktes Lampen- oder Verlängerungskabel direkt neben die Steckbrücke und nimm es wieder weg.
-  Ändert sich Staerke? **(prüfen)**
+  Staerke springt hoch, beim Testen bis 600 und mehr. Zieh den Stecker aus der Wand: wieder Ruhe.
 - Steck zum Vergleich einen langen Draht (1 m) an: Staerke geht schon in Ruhe fast bis zum Anschlag. Mehr Antenne
   heißt mehr Empfang, aber irgendwann zu viel.
 

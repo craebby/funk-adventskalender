@@ -19,7 +19,7 @@ const SEITEN = {
 };
 
 // Bei geaenderten Steckbildern hochzaehlen, damit Browser nicht die alte Fassung aus dem Cache zeigen
-const BILD_VERSION = 8;
+const BILD_VERSION = 9;
 
 const SPEICHER = "funkadvent";
 

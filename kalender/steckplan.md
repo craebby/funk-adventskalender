@@ -4,7 +4,7 @@ Alles steckt auf einem Steckbrett mit 400 Kontakten: 30 Reihen (1–30), links d
 außen je eine rote Plus- und eine blaue Minus-Schiene. Teile bleiben stecken, bis der Text sagt, dass sie
 raus dürfen. **Jedes Loch wird nur einmal benutzt**, auch auf den Schienen. So muss man nicht jeden Tag neu anfangen.
 
-**Stand:** Am Schreibtisch geplant, noch nicht mit dem Miuzei-Steckbrett geprüft. **(prüfen)**
+**Stand:** Im November 2026 komplett nachgebaut und getestet, mit einem großen Steckbrett (über 60 Reihen, die Reihen 1 bis 30 von oben gezählt).
 
 ## So ist ein Steckbrett verbunden
 
@@ -33,7 +33,8 @@ raus dürfen. **Jedes Loch wird nur einmal benutzt**, auch auf den Schienen. So 
 Das Steckbrett wird einmal umgebaut. Der Nano kommt hinein, der Uno wird die Fernbedienung.
 
 **Nano:** in die Reihen 1 bis 15, quer über den Graben, USB-Buchse nach oben (Reihe 1). Die Stiftreihen stecken
-in Spalte d und h. Links bleiben a–c frei, rechts i–j. **(prüfen: je nach Nano auch c und g)**
+in Spalte d und h. Links bleiben a–c frei, rechts i–j. Ist dein Nano breiter oder hat er falsch herum angelötete
+Stifte, leg ihn neben das Brett und verbinde die Stifte mit Kabeln (5V, GND, D2, D5, D6, D7, D9, ab Tag 24 A1).
 
 Dann liegen die Pins so (der Aufdruck auf dem Nano gilt, falls deiner anders ist):
 
@@ -47,7 +48,7 @@ Dann liegen die Pins so (der Aufdruck auf dem Nano gilt, falls deiner anders ist
 | Schienen | wie vorher verbunden | a12 (5V) → linke +, a14 (GND) → linke − |
 | Kerze 1, 2, 3 | 220 Ω e17–f17, e19–f19, e21–f21, LEDs langes Bein j17/j19/j21, kurzes in rechte − | i8 (D5) → a17, i7 (D6) → a19, i6 (D7) → a21 |
 | 433-MHz-Empfänger | c23 bis c26, Antenne bleibt dran | a23 → linke +, i11 (D2) → a24, a26 → linke − |
-| Fotowiderstand | c28 und c29, 10 kΩ von b29 schräg in die linke − (Reihe 28, Reihe 29 ist schon belegt) | a28 → linke +, a5 (A1) → a29 |
+| Fotowiderstand (erst an Tag 24) | c28 und c29, 10 kΩ von b29 schräg in die linke − (Reihe 28, Reihe 29 ist schon belegt) | a28 → linke +, a5 (A1) → a29 |
 | Passiver Summer | + in i24, − direkt in die rechte − (Reihe 24) | i4 (D9) → f24 |
 
 **Uno als Fernbedienung (ohne Steckbrett):**
