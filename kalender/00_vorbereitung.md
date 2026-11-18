@@ -25,7 +25,7 @@ musst sie nur kopieren und hochladen.
 - **Serieller Monitor** (Lupe oben rechts): Hier schreibt der Arduino Text. Unten rechts **115200 Baud**
   einstellen, sonst siehst du nur Zeichensalat.
 - **Serieller Plotter** (Werkzeuge → Serieller Plotter): Zeigt Zahlen als Kurve. Ab Tag 8 dein Oszilloskop.
-- **Bibliotheken** (ab Tag 16): Werkzeuge → Bibliotheken verwalten, den Namen eintippen, „Installieren“.
+- **Bibliotheken** (ab Tag 17): Werkzeuge → Bibliotheken verwalten, den Namen eintippen, „Installieren“.
 
 ## Unterwegs ohne PC
 

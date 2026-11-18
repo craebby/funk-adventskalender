@@ -1,31 +1,63 @@
-# 17. Dezember: Eine Antenne bauen
+# 17. Dezember: Wer funkt denn hier?
 
-**Heute neu:** zwei Drähte, je **17,3 cm**
-
-## Aufbau
-
-Zwei Stücke Draht genau 17,3 cm lang abschneiden. An beiden Enden 5 mm abisolieren (vorsichtig die Plastikhülle
-einritzen und abziehen).
-
-- **Empfänger:** Ein Draht durch das kleine Loch mit der Aufschrift **ANT**, ein paar Mal um sich selbst
-  verdrillen, damit er hält.
-- **Sender** (die kleinere, quadratische Platine, die du morgen brauchst): den zweiten Draht genauso durch sein
-  ANT-Loch.
-
-Kein Löten nötig. Gelötet hält es besser, aber verdrillt reicht.
+**Heute neu:** nichts. Die Antenne von gestern bleibt am Empfänger, heute zeigt sie, was sie kann.
 
 ## Programm
 
-Wieder [`tag15_rauschen.ino`](../sketches/tag15_rauschen/tag15_rauschen.ino).
+[`tag17_wetterlauscher.ino`](../sketches/tag17_wetterlauscher/tag17_wetterlauscher.ino), Seriellen Monitor auf
+(115200 Baud). Keine Bibliothek nötig.
 
 ## Was passiert
 
-Hör auf das Rauschen und schau in den Plotter, einmal ohne und einmal mit Antenne. Leg dein Handy daneben und ruf
-jemanden an oder starte ein Video: Mit Antenne knattert das Handy deutlich ins Rauschen hinein.
+Der Arduino lauscht auf Funk-Thermometer in der Nachbarschaft. Die meisten funken nach demselben Muster: kurzer
+Puls, dann eine kurze Pause (= 0) oder eine lange Pause (= 1). Der Sketch sammelt diese Nullen und Einsen und
+versucht, Temperatur und Feuchte herauszulesen.
+
+Geduld: Thermometer funken nur alle 30 bis 60 Sekunden. Lass ihn ein paar Minuten laufen. So sah es beim Testen
+aus, mit dem Thermometer auf dem Dachboden und dem auf dem Balkon:
+
+```
+Telegramm Nr. 2 nach 149 s: 36 Bits  010001101000000001101100111100000000
+  -> Thermometer (Nexus-Format): ID 70, Kanal 1, 10.8 Grad
+Telegramm Nr. 3 nach 221 s: 40 Bits  0011100011010000010101110100100001000001
+  -> Thermometer (inFactory-Format): ID 56, 9.8 Grad, Feuchte 84 %
+```
+
+Die Temperatur steckt direkt in den Bits. Beim Nexus-Thermometer sind es die Bits 13 bis 24:
+`000001101100` ist 108, also 10,8 Grad.
+
+**Kommt nichts?** Ohne Antenne hört der Empfänger nur ein paar Meter weit. Mit dem 17,3-cm-Draht am Loch ANT
+klappt es durch Wände und aus der Nachbarschaft. „Unbekanntes Gerät“ heißt: Da funkt etwas in einem Format, das der
+Sketch nicht kennt, zum Beispiel eine Wetterstation einer anderen Marke.
+
+**Welche Thermometer kennt der Sketch?** Das Nexus-Format benutzen viele günstige Funkthermometer, auch unter
+anderen Namen (zum Beispiel Sencor, Digoo, Rubicson). Dazu kommt inFactory (oft von Pearl). Manche
+Wetterstationen, etwa viele von Bresser, TFA oder La Crosse, funken in einem anderen Verfahren (FSK) oder auf
+868 MHz. Die kann dieser einfache Empfänger gar nicht hören, egal mit welchem Programm.
+
+## Bonus: Fernbedienungen mitlesen
+
+Hast du eine Funksteckdosen-Fernbedienung, eine Funkklingel oder einen Garagentoröffner? Die funken in einem
+anderen Format. Dafür gibt es eine fertige Bibliothek:
+
+1. In der IDE: Werkzeuge → Bibliotheken verwalten → **rc-switch** (mit Bindestrich) suchen → die von **sui77**
+   installieren (Version 2.6.4). Findest du sie nicht, such nach **sui77**. Nicht „RcSwitchReceiver“ oder
+   „RcSwitchTransmitter“ nehmen, das sind andere Bibliotheken.
+2. [`tag17_funklauscher.ino`](../sketches/tag17_funklauscher/tag17_funklauscher.ino) hochladen, Monitor auf, auf
+   die Fernbedienung drücken: Im Monitor erscheint der Code, den das Gerät funkt.
+
+Die Bibliothek brauchst du ab Tag 18 sowieso.
 
 ## Übrigens
 
-Warum 17,3 cm? Eine Funkwelle bei 433 MHz ist von Berg zu Berg 69,2 cm lang. Antennen funktionieren besonders gut,
-wenn sie ein Viertel davon lang sind. Funkamateure rechnen das ständig, für jedes Band eine andere Länge.
+433 MHz heißt: Die Welle schwingt 433 Millionen Mal pro Sekunde. Erinnerst du dich an die 50 Hz aus der
+Steckdose? Hier ist es fast zehn Millionen Mal schneller. Das Band ist für Geräte mit wenig Leistung frei, ohne
+Anmeldung. Deshalb funken dort Klingeln, Garagentore und Wetterstationen.
 
-> 📻 **Funkamateur-Ecke:** 433 MHz liegt mitten im **70-cm-Band** der Funkamateure (430 bis 440 MHz). Dein Sender darf dort mit 10 Tausendstel Watt funken. Mit der Einsteigerlizenz **N** dürften Funkamateure auf demselben Band mit bis zu 10 Watt senden, tausendmal mehr, und mit Menschen sprechen statt nur Zahlen zu schicken.
+Beim Bauen dieses Türchens hat der Empfänger gezeigt, wie Funk im echten Leben ist: Nach jeder langen Pause
+dreht er die Verstärkung hoch und rauscht, dabei gehen gern die ersten Bits verloren. Winzige Störpulse
+zerhacken die Pausen. Deshalb senden die Thermometer jeden Messwert sechs- bis zehnmal hintereinander, und deshalb
+rechnet der Balkon-Sensor eine **Prüfsumme** mit: Stimmt sie, ist kein Bit falsch. Dein Handy, WLAN und das
+Digitalradio machen es genauso, nur viel schneller.
+
+Bitte nur auf eigene Geräte drücken und fremde Codes nicht nachsenden.

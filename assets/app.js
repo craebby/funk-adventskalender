@@ -4,8 +4,8 @@ const TITEL = [
   "Hallo Steckbrett", "Die erste LED blinkt", "Drei flackernde Kerzen", "Licht per Knopf",
   "Jingle Bells", "Nikolaus spielt Licht-Theremin", "Das Nachtlicht", "Die Luft ist voller Strom",
   "Der Brumm-Melder", "Der Knacks-Detektor", "Das Ultraschall-Theremin", "Der Morse-Übersetzer",
-  "Der Radar-Wächter", "Zahlen per Licht", "So klingt Funkstille", "Wer funkt denn hier?",
-  "Eine Antenne bauen", "Der eigene Sender", "Die Keksdose als Funkbunker", "Die Weihnachtsfernbedienung",
+  "Der Radar-Wächter", "Zahlen per Licht", "So klingt Funkstille", "Eine Antenne bauen",
+  "Wer funkt denn hier?", "Der eigene Sender", "Die Keksdose als Funkbunker", "Die Weihnachtsfernbedienung",
   "Die Funk-Postkarte", "Wie falsch geht der Arduino?", "Die Atomuhr hören", "Der funkgesteuerte Weihnachtsbaum",
 ];
 
@@ -19,7 +19,7 @@ const SEITEN = {
 };
 
 // Bei geaenderten Steckbildern hochzaehlen, damit Browser nicht die alte Fassung aus dem Cache zeigen
-const BILD_VERSION = 7;
+const BILD_VERSION = 8;
 
 const SPEICHER = "funkadvent";
 

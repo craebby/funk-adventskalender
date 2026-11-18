@@ -1,4 +1,4 @@
-// Tag 16: Wer funkt denn hier?
+// Tag 17: Wer funkt denn hier?
 // 433-MHz-Empfaenger: VCC an 5V, GND an GND, DATA an Pin 2. Antenne (17,3 cm) ans Loch ANT. Keine Bibliothek noetig.
 // Der Arduino lauscht auf Funk-Thermometer in der Nachbarschaft. Die meisten billigen Sensoren
 // funken so: kurzer Puls, dann eine kurze Pause (= 0) oder eine lange Pause (= 1), am Ende eine sehr lange Pause.

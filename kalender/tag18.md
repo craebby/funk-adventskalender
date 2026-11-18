@@ -15,7 +15,7 @@ Nimm dir etwas mehr Zeit als sonst.
    GND des Nano, Empfänger in Reihe 23–26 mit DATA an **D2**, Kerzen in Reihe 17/19/21 an D5/D6/D7, Summer an D9,
    Fotowiderstand an A1.
 4. Nano mit dem USB-C-Kabel an den PC. In der IDE als Board „Arduino Nano“ wählen, Prozessor „ATmega328P“.
-5. [`tag16_funklauscher.ino`](../sketches/tag16_funklauscher/tag16_funklauscher.ino) auf den **Nano** laden.
+5. [`tag17_funklauscher.ino`](../sketches/tag17_funklauscher/tag17_funklauscher.ino) auf den **Nano** laden.
 
 ## Umbau Uno (Uno = Sender)
 

@@ -32,8 +32,8 @@ Ziel: jeden Tag einmal echt aufbauen, bevor der Kalender beworben wird. Ergebnis
 | 13 | Radar-Wächter (neu 17.11.) | Freie Strecke wird gemessen, Durchlaufen zählt als Besuch. **(prüfen: Reichweite, Fehlalarme)** | |
 | 14 | Zahlen per Licht | „Stimmt!“ **(prüfen: Tempo, LDR-Trägheit)** | |
 | 15 | Rauschen des Empfängers | Summer rauscht, Plotter zappelt | ✅ 18.11. 250–450 Wechsel pro 0,1 s |
-| 16 | Wetterlauscher (neu 18.11., ohne Bibliothek) | Thermometer der Nachbarschaft mit Temperatur | ✅ 18.11. Nach mehreren Runden: Störpulse überspringen, Auswertung an jeder Stelle, inFactory mit CRC. Nexus-T 70 und inFactory 56 kommen regelmäßig, Werte passen zu rtl_433. Ohne Antenne nichts. Bonus rc-switch mit Flipper (Princeton) kommt an ✅ |
-| 17 | Antennen 17,3 cm | Rauschen ändert sich | |
+| 16 | Antennen 17,3 cm | Rauschen ändert sich | |
+| 17 | Wetterlauscher (neu 18.11., ohne Bibliothek) | Thermometer der Nachbarschaft mit Temperatur | ✅ 18.11. Nach mehreren Runden: Störpulse überspringen, Auswertung an jeder Stelle, inFactory mit CRC. Nexus-T 70 und inFactory 56 kommen regelmäßig, Werte passen zu rtl_433. Ohne Antenne nichts. Bonus rc-switch mit Flipper (Princeton) kommt an ✅ |
 | 18 | Umbau, Nano empfängt 2412 | **Platzprobe Nano auf dem Steckbrett, Pinbelegung wie im Steckplan?** | |
 | 19 | Alufolie, Keksdose | Keksdose = Funkstille | |
 | 20 | Fernbedienung mit Powerbank | Kerzen an/aus aus dem Nebenzimmer, Glocke | |

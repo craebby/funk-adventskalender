@@ -1,7 +1,7 @@
-// Tag 16: Wer funkt denn hier?
+// Tag 17: Wer funkt denn hier? (Bonus mit rc-switch)
 // Bibliothek "rc-switch" (von sui77) ueber den Bibliotheksverwalter installieren.
 // Empfaenger wie gestern an Pin 2. Serieller Monitor auf 115200 Baud.
-// Laeuft auf dem Uno (Tag 16) und ab Tag 18 genauso auf dem Nano, gleiche Pins.
+// Laeuft auf dem Uno (Tag 17) und ab Tag 18 genauso auf dem Nano, gleiche Pins.
 // Druecke die Fernbedienung einer Funksteckdose oder eine Funk-Tuerklingel:
 // Der Arduino zeigt den Code, den sie sendet.
 // Manche Wettersensoren und Garagentore funken in einem Format, das rc-switch nicht kennt.

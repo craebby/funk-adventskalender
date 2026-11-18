@@ -287,7 +287,7 @@ def tag_bild(t):
             b.add(uno_draht("Pin 8", "f4", FARBE["signal"]), neu(11))
             b.add(draht(loch("f5"), loch("R-5"), FARBE["minus"], 4), neu(11))
         if t >= 15:
-            b.add(empfaenger(24, antenne=t >= 17), neu(15) or neu(17))
+            b.add(empfaenger(24, antenne=t >= 16), neu(15) or neu(16))
             b.add(draht(loch("L+24"), loch("a24"), FARBE["plus"], 4), neu(15))
             b.add(uno_draht("Pin 2", "a25", FARBE["signal"]), neu(15))
             b.add(draht(loch("a27"), loch("L-27"), FARBE["minus"], 4), neu(15))

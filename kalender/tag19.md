@@ -4,7 +4,7 @@
 
 ## Aufbau und Programm
 
-Wie gestern: Nano mit `tag16_funklauscher`, Uno mit `tag18_fernbedienung`.
+Wie gestern: Nano mit `tag17_funklauscher`, Uno mit `tag18_fernbedienung`.
 
 ## Experimente
 
