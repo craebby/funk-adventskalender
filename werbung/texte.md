@@ -17,8 +17,8 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > 📡🎄 **Der Funk-Adventskalender ist da!**
 >
 > 24 Türchen, 24 Experimente auf dem Steckbrett. Du hörst den Strom in der Luft, jagst Funken im Lichtschalter,
-> spielst Theremin, empfängst echte Funksignale und lauschst der Atomuhr. An Heiligabend steuerst du deinen
-> Weihnachtsbaum per Funk.
+> morst mit einem Arduino, der live übersetzt, liest die Funk-Thermometer der Nachbarschaft mit und lauschst der
+> Atomuhr. An Heiligabend steuerst du deinen Weihnachtsbaum per Funk.
 >
 > Kein Löten. Kein Vorwissen. Kostenlos und offen. Teile ab ca. 40 €.
 >
@@ -41,6 +41,8 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > - ⚡ Woche 2: Unsichtbare Felder werden hörbar. Danach hörst du deine Wohnung mit anderen Ohren.
 > - 📡 Woche 3: Echter Funk auf 433 MHz, mit selbst gebauter Antenne
 > - 🎄 Woche 4: Eine Atomuhr, ein Weihnachtsgruß durch die Luft und ein großes Finale an Heiligabend
+>
+> Getestet: Ich habe alle Tage selbst nachgebaut, mit Teilen aus der Bastelkiste.
 >
 > **Was brauche ich?** Einen Arduino Uno und Nano, ein Steckbrett, ein paar Bauteile und ein 433-MHz-Set.
 > Neu gekauft etwa 40 €, wer eine Bastelkiste hat, braucht oft nur das Funkset. Nichts wird gelötet,
