@@ -20,5 +20,6 @@ Schreib auf: Nach ___ Stunden lag der Arduino ___ Sekunden daneben.
 ## Übrigens
 
 Der Arduino hat keine richtige Uhr, er zählt die Schwingungen eines kleinen Bauteils auf der Platine. Das ist bei
-billigen Boards nicht sehr genau, ein paar Sekunden pro Stunde sind normal. Eine Armbanduhr mit Quarz schafft
+billigen Boards nicht sehr genau. Beim Testen lag ein Nano nach gut 5 Stunden 15 Sekunden daneben, also etwa
+3 Sekunden pro Stunde. Aufs Jahr gerechnet wären das über 7 Stunden! Eine Armbanduhr mit Quarz schafft
 ein paar Sekunden im Monat. Und noch genauer? Darum geht es morgen.

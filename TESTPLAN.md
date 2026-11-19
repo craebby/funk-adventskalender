@@ -38,7 +38,7 @@ Ziel: jeden Tag einmal echt aufbauen, bevor der Kalender beworben wird. Ergebnis
 | 19 | Alufolie, Keksdose | Keksdose = Funkstille | übersprungen 18.11. |
 | 20 | Fernbedienung mit Powerbank | Kerzen an/aus, Glocke | ✅ 18.11. Nach Überarbeitung: alle drei Kerzen, sauberes An/Aus, Glocke nach ca. 3 s Gruß. Vorher: Grün fehlte im Sketch, Mehrfachschalten, Gruß 7 s. Eigener Fehler beim Test: D9-Kabel eine Reihe verrutscht |
 | 21 | Funk-Postkarte | alle Buchstaben kommen an? **(prüfen)** | ✅ 18.11. „FROHE WEIHNACHTEN!“ kam komplett an |
-| 22 | Arduino-Uhr | nach 1 h einige Sekunden Abweichung | läuft seit 18.11. 16:07 Uhr (Start auf voller Minute) |
+| 22 | Arduino-Uhr | nach 1 h einige Sekunden Abweichung | ✅ 18.11. Nano-Nachbau 16:07–21:24 (5:17 h): ca. 15 s Abweichung, also ~3 s/h → in den Text übernommen |
 | 23 | WebSDR DCF77 | Ticken hörbar. Mit Modul: Uhrzeit im Monitor **(prüfen: Pegel)** | ✅ WebSDR: Ticken deutlich hörbar (16.11.). Modul noch offen |
 | 24 | Finale | Taste 1 Kerzen, Taste 2 Gruß + Jingle Bells, Dunkel = Kerzen an | nicht einzeln getestet. Bausteine (Funk 2412/2512, Gruß, Kerzen, Summer, Lichtsensor) an Tag 6/18/20/21 getestet |
 

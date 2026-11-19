@@ -95,7 +95,7 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 - Mastodon: #Amateurfunk, #HamRadio, #Arduino
 - Facebook-Gruppen: Amateurfunk Deutschland, Arduino Deutschland, Maker-Gruppen
 - mikrocontroller.net (Forum „Projekte & Code“)
-- frifle (Fritjof Flechsig) per Discussion im Repo seines Kalenders fragen, ob er einen Hinweis setzt
+- frifle (GitHub-Name, bürgerlicher Name nicht öffentlich) per Discussion in github.com/frifle/adventskalender fragen, ob er einen Hinweis setzt
 - Elektronik-Labor (Burkhard Kainka) per Mail anfragen
 - Schul-AGs, Makerspaces, FabLabs in der Nähe
 
