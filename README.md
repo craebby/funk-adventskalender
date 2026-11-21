@@ -37,7 +37,7 @@ die Steckbilder aus `bilder/`.
 - **Steckbilder neu erzeugen** (nach Änderungen am Steckplan): `python3 tools/steckbilder.py`
 - **Steckbilder prüfen** (doppelt belegte oder verdeckte Löcher): `python3 tools/pruefe_steckbilder.py`,
   alle Bilder auf einen Blick: `tools/uebersicht.html` im lokalen Server
-- **Werbetexte:** [werbung/texte.md](werbung/texte.md)
+- **Bilder zum Teilen:** [werbung/bilder/](werbung/bilder/)
 
 ## Der Kalender zum Lesen
 
