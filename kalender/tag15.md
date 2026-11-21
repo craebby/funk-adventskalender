@@ -29,6 +29,14 @@ So ein Empfänger ist eitel: Wenn keiner sendet, dreht er seine Verstärkung so 
 Rauschen hört. Sobald ein richtiges Signal kommt, wird er still und gibt es sauber wieder. Das Rauschen entsteht
 zum größten Teil im Empfänger selbst: Jedes warme Bauteil zappelt ein bisschen elektrisch.
 
+## Bonus: Rauschen in einem großen Empfänger
+
+Auch ein richtiger Funkempfänger rauscht. Öffne **websdr.ewi.utwente.nl:8901**, das ist ein Empfänger an der
+Universität Twente in den Niederlanden, den jeder übers Internet bedienen darf. Wähle **AM** und klick im
+**Wasserfall** (dem bunten Bild oben) auf eine dunkle Stelle zwischen zwei hellen Streifen. Dort sendet niemand,
+und du hörst dasselbe Rauschen wie bei deinem Empfänger. Im Wasserfall sieht es aus wie graues Gekrissel.
+Klickst du auf einen hellen Streifen, wird es still, und ein Sender ist da. Genau wie bei dir.
+
 ## Klappt nicht?
 
 Steht auf dem kleinen silbernen Bauteil des Empfängers **433**? Es gibt baugleiche Module für 315 MHz.

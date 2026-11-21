@@ -4,7 +4,7 @@ Schön, dass du dabei bist! In den nächsten 24 Tagen machst du Dinge hör- und 
 dich herum passieren: den Strom in der Luft, Funken beim Lichtschalten, Ultraschall und echte Funksignale. Am
 Heiligabend steuerst du deinen eigenen Weihnachtsbaum per Funk.
 
-Du brauchst kein Vorwissen. Jeder Tag dauert 15 bis 30 Minuten. Die Programme (Sketches) bekommst du fertig, du
+Du brauchst kein Vorwissen. Jeder Tag dauert 10 bis 20 Minuten. Die Programme (Sketches) bekommst du fertig, du
 musst sie nur kopieren und hochladen.
 
 ## Einmal einrichten (ca. 15 Minuten)

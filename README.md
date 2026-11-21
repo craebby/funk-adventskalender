@@ -12,7 +12,7 @@
 
 Konzept, Stand 17.11.2026.
 
-24 kleine Experimente auf dem Steckbrett, jeden Tag 15 bis 30 Minuten. Man braucht kein Vorwissen und keinen
+24 kleine Experimente auf dem Steckbrett, jeden Tag 10 bis 20 Minuten. Man braucht kein Vorwissen und keinen
 Lötkolben: aufbauen, Sketch kopieren, hochladen, staunen. Am ersten Tag leuchtet eine LED, am Ende schaltet eine
 selbst gebaute Funkfernbedienung den Weihnachtsbaum aus dem Nebenzimmer und schickt einen Weihnachtsgruß.
 
@@ -188,6 +188,8 @@ Feste Pins, beim Uno und beim Nano gleich:
 | 22 | **Wie falsch geht der Arduino?** | Der Arduino zählt die Zeit seit dem Start. Zur vollen Minute starten, nach ein paar Stunden mit time.is vergleichen: Er geht falsch, oft um mehrere Sekunden pro Stunde. Genau dafür gibt es Funkuhren. | `tag22_arduinouhr` |
 | 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach 3 bis 5 Minuten die Uhrzeit (am 21.11. mit Modul getestet). | optional `tag23_atomuhr_modul`, Prüfhilfe `tag23_dcf_test` |
 | 24 | **Finale: Der funkgesteuerte Weihnachtsbaum** | Taste 1 schaltet die Kerzen, Taste 2 schickt den Gruß und spielt Jingle Bells, und bei Dunkelheit gehen die Kerzen von selbst an. Bonus mit SDR-Stick: den eigenen Sender als Strich im Wasserfall sehen. | Nano: `tag24_finale` |
+| 25 | **Bonus: Radio aus aller Welt** | Kein Steckbrett, nur der WebSDR: Mittel- und Kurzwelle auf AM, Rundfunk aus vielen Ländern, Wasserfall lesen, warum abends mehr geht (Ionosphäre). | – |
+| 26 | **Bonus: Funkamateure live** | SSB auf 40 m (abends) und 20 m (tagsüber), CQ und Rufzeichen deuten, CW, FT8 auf 7074/14074 kHz, SSTV-Bilder auf 14230 kHz mit Handy-App, Weg zur Klasse N. | – |
 
 ### Amateurfunk als roter Faden
 

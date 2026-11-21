@@ -52,4 +52,5 @@ So kommst du hin:
 3. **Zuhören geht sofort**: Mit dem WebSDR von Tag 23 kannst du schon heute Abend Funkamateuren aus ganz Europa
    lauschen.
 
-**Frohe Weihnachten!**
+**Frohe Weihnachten!** Und schau morgen und übermorgen noch einmal vorbei: Es gibt zwei Bonus-Türchen zum
+Zuhören, ganz ohne Steckbrett.

@@ -75,6 +75,12 @@ header.kopf .unter { font-size: clamp(1rem, 2.6vw, 1.3rem); color: #c9d4ff; marg
 .tuer.zu .vorne { filter: saturate(0.6) brightness(0.85); }
 .tuer:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .tuer.wackeln { animation: wackeln 0.4s; }
+/* Bonus-Türchen 25 und 26: breit und golden, in eigener Reihe unter den 24 */
+.tuer.bonus { grid-column: span 3; aspect-ratio: auto; min-height: 110px; }
+@media (max-width: 760px) { .tuer.bonus { grid-column: span 2; } }
+@media (max-width: 440px) { .tuer.bonus { grid-column: span 3; } }
+.raster .tuer.bonus .vorne { background: linear-gradient(145deg, #e0b03a, #9a6b12); flex-direction: row; gap: 14px; }
+.tuer .bonus-text { color: #fff; font-weight: 700; font-size: 1.05rem; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
 @keyframes wackeln { 25% { transform: rotate(-3deg); } 75% { transform: rotate(3deg); } }
 
 #meldung {

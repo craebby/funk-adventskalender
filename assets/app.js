@@ -7,7 +7,13 @@ const TITEL = [
   "Der Radar-Wächter", "Zahlen per Licht", "So klingt Funkstille", "Eine Antenne bauen",
   "Wer funkt denn hier?", "Der eigene Sender", "Die Keksdose als Funkbunker", "Die Weihnachtsfernbedienung",
   "Die Funk-Postkarte", "Wie falsch geht der Arduino?", "Die Atomuhr hören", "Der funkgesteuerte Weihnachtsbaum",
+  "Bonus: Radio aus aller Welt", "Bonus: Funkamateure live",
 ];
+
+// Nach Heiligabend gibt es zwei Bonus-Türchen ohne Steckbrett, nur mit dem WebSDR im Browser
+const LETZTER = 24;
+const BONUS = [25, 26];
+const ALLE = LETZTER + BONUS.length;
 
 // Feste, gemischte Reihenfolge wie bei einem echten Kalender
 const REIHENFOLGE = [7, 18, 3, 22, 11, 1, 15, 9, 24, 5, 13, 20, 2, 17, 10, 6, 21, 14, 4, 23, 12, 19, 8, 16];
@@ -89,32 +95,37 @@ function kalenderZeichnen() {
   const raster = document.getElementById("raster");
   const besucht = speicher().besucht || [];
   raster.innerHTML = "";
-  for (const n of REIHENFOLGE) {
-    const offen = istOffen(n);
-    const war = besucht.includes(n);
-    const tuer = document.createElement("button");
-    tuer.className = "tuer" + (offen ? "" : " zu") + (war ? " offen" : "");
-    tuer.setAttribute("aria-label", offen ? `Türchen ${n} öffnen` : `Türchen ${n}, noch geschlossen`);
-    tuer.innerHTML =
-      `<div class="innen"><strong>${n}</strong>${war ? TITEL[n - 1] : "🎁"}</div>` +
-      `<div class="vorne"><span class="zahl">${n}</span>${offen ? "" : '<span class="schloss">🔒</span>'}</div>`;
-    tuer.addEventListener("click", () => {
-      if (!istOffen(n)) {
-        tuer.classList.remove("wackeln");
-        void tuer.offsetWidth;
-        tuer.classList.add("wackeln");
-        const tage = tageBis(n);
-        melden(tage === 1 ? `Türchen ${n} geht morgen auf.` : `Noch ${tage} Tage bis Türchen ${n}. Geduld!`);
-        return;
-      }
-      const d = speicher();
-      d.besucht = [...new Set([...(d.besucht || []), n])];
-      speichern(d);
-      tuer.classList.add("offen");
-      setTimeout(() => (location.href = `tag.html?t=${n}`), 650);
-    });
-    raster.appendChild(tuer);
-  }
+  for (const n of REIHENFOLGE) raster.appendChild(tuerBauen(n, besucht));
+  for (const n of BONUS) raster.appendChild(tuerBauen(n, besucht));
+}
+
+function tuerBauen(n, besucht) {
+  const offen = istOffen(n);
+  const war = besucht.includes(n);
+  const bonus = n > LETZTER;
+  const tuer = document.createElement("button");
+  tuer.className = "tuer" + (bonus ? " bonus" : "") + (offen ? "" : " zu") + (war ? " offen" : "");
+  tuer.setAttribute("aria-label", (bonus ? "Bonus-" : "") + (offen ? `Türchen ${n} öffnen` : `Türchen ${n}, noch geschlossen`));
+  tuer.innerHTML =
+    `<div class="innen"><strong>${n}</strong>${war ? TITEL[n - 1] : "🎁"}</div>` +
+    `<div class="vorne"><span class="zahl">${n}</span>${bonus ? '<span class="bonus-text">Bonus 📻</span>' : ""}` +
+    `${offen ? "" : '<span class="schloss">🔒</span>'}</div>`;
+  tuer.addEventListener("click", () => {
+    if (!istOffen(n)) {
+      tuer.classList.remove("wackeln");
+      void tuer.offsetWidth;
+      tuer.classList.add("wackeln");
+      const tage = tageBis(n);
+      melden(tage === 1 ? `Türchen ${n} geht morgen auf.` : `Noch ${tage} Tage bis Türchen ${n}. Geduld!`);
+      return;
+    }
+    const d = speicher();
+    d.besucht = [...new Set([...(d.besucht || []), n])];
+    speichern(d);
+    tuer.classList.add("offen");
+    setTimeout(() => (location.href = `tag.html?t=${n}`), 650);
+  });
+  return tuer;
 }
 
 function startseite() {
@@ -127,8 +138,10 @@ function startseite() {
     h.innerHTML = `Noch <strong>${tage} ${tage === 1 ? "Tag" : "Tage"}</strong> bis zum ersten Türchen. ` +
       `Zeit genug, um die <a href="tag.html?s=einkauf">Teile zu besorgen</a> und die ` +
       `<a href="tag.html?s=vorbereitung">Vorbereitung</a> zu lesen.`;
-  } else if (monat === 12 && tag <= 24) {
+  } else if (monat === 12 && tag <= LETZTER) {
     h.innerHTML = `Heute ist Türchen <strong>${tag}</strong> dran. Viel Spaß!`;
+  } else if (monat === 12 && tag <= ALLE) {
+    h.innerHTML = `Frohe Weihnachten! Heute gibt es das Bonus-Türchen <strong>${tag}</strong>: kein Steckbrett, nur zuhören.`;
   } else {
     h.innerHTML = "Alle Türchen sind offen. Viel Spaß beim Nachbauen, auch nach Weihnachten!";
   }
@@ -188,7 +201,7 @@ async function tagesseite() {
   if (seite) {
     datei = seite.datei;
     document.title = `${seite.titel} – Funk-Adventskalender`;
-  } else if (n >= 1 && n <= 24) {
+  } else if (n >= 1 && n <= ALLE) {
     if (!istOffen(n)) {
       const tage = tageBis(n);
       blatt.innerHTML = `<div class="gesperrt"><div class="gross">🔒</div><h1>Türchen ${n} ist noch zu</h1>` +
@@ -200,7 +213,7 @@ async function tagesseite() {
     const navi = document.getElementById("navi");
     navi.innerHTML =
       (n > 1 ? `<a class="knopf" href="tag.html?t=${n - 1}">← Türchen ${n - 1}</a>` : "<span></span>") +
-      (n < 24 ? `<a class="knopf" href="tag.html?t=${n + 1}">Türchen ${n + 1} →</a>` : "<span></span>");
+      (n < ALLE ? `<a class="knopf" href="tag.html?t=${n + 1}">Türchen ${n + 1} →</a>` : "<span></span>");
     const d = speicher();
     d.besucht = [...new Set([...(d.besucht || []), n])];
     speichern(d);
@@ -216,7 +229,7 @@ async function tagesseite() {
     blatt.innerHTML = "<p>Die Seite konnte nicht geladen werden.</p>";
     return;
   }
-  if (n && !seite) {
+  if (n && !seite && n <= LETZTER) {
     const nr = String(n).padStart(2, "0");
     const fig = document.createElement("figure");
     fig.className = "steckbild";
