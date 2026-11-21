@@ -21,8 +21,8 @@ beim Lichtschalten, Ultraschall, Funksignale, die Atomuhr. Der Kalender macht da
 
 **Stand der Prüfung:** Alle Sketches kompilieren für Uno und Nano. Vom 17. bis 18.11.2026 wurde der Kalender mit
 eigenen Teilen komplett nachgebaut (Uno R3, Nano-Nachbau mit CH340, großes Steckbrett) und dabei an vielen Stellen
-verbessert. Details und Messwerte stehen in [TESTPLAN.md](TESTPLAN.md). Noch nicht mit Hardware geprüft: das
-optionale DCF77-Modul (Tag 23) und die Keksdose (Tag 19).
+verbessert. Details und Messwerte stehen in [TESTPLAN.md](TESTPLAN.md). Am 21.11. kam das optionale
+DCF77-Modul (Tag 23) dazu. Noch nicht mit Hardware geprüft: die Keksdose (Tag 19).
 
 ## Die Webseite
 
@@ -186,7 +186,7 @@ Feste Pins, beim Uno und beim Nano gleich:
 | Tag | Experiment | Was passiert | Sketch |
 |---|---|---|---|
 | 22 | **Wie falsch geht der Arduino?** | Der Arduino zählt die Zeit seit dem Start. Zur vollen Minute starten, nach ein paar Stunden mit time.is vergleichen: Er geht falsch, oft um mehrere Sekunden pro Stunde. Genau dafür gibt es Funkuhren. | `tag22_arduinouhr` |
-| 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach einer Minute die Uhrzeit. | optional `tag23_atomuhr_modul` |
+| 23 | **Die Atomuhr hören** | Für alle: Im Browser den WebSDR der Uni Twente öffnen (websdr.ewi.utwente.nl:8901), DCF77 aus der Stationsliste wählen. Man hört die Sekunden ticken, kurz und lang, aus Mainflingen bei Frankfurt. Am 16.11. getestet, das Ticken ist deutlich. Für Ambitionierte mit DCF77-Modul: Der Arduino empfängt selbst und zeigt nach 3 bis 5 Minuten die Uhrzeit (am 21.11. mit Modul getestet). | optional `tag23_atomuhr_modul`, Prüfhilfe `tag23_dcf_test` |
 | 24 | **Finale: Der funkgesteuerte Weihnachtsbaum** | Taste 1 schaltet die Kerzen, Taste 2 schickt den Gruß und spielt Jingle Bells, und bei Dunkelheit gehen die Kerzen von selbst an. Bonus mit SDR-Stick: den eigenen Sender als Strich im Wasserfall sehen. | Nano: `tag24_finale` |
 
 ### Amateurfunk als roter Faden
@@ -232,7 +232,6 @@ An den übrigen Tagen wird nur umgebaut.
 
 ## Offene Punkte
 
-1. DCF77-Modul (Tag 23) mit echtem Modul prüfen.
-2. Platzprobe des Nano im 400er-Steckbrett des Miuzei-Kits (getestet wurde mit einem großen Brett und einem per
+1. Platzprobe des Nano im 400er-Steckbrett des Miuzei-Kits (getestet wurde mit einem großen Brett und einem per
    Kabel angeschlossenen Nano).
-3. Fotos der Aufbauten für die Tagesseiten.
+2. Fotos der Aufbauten für die Tagesseiten.

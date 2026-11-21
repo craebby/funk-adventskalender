@@ -1,6 +1,6 @@
 # Texte zum Bekanntmachen
 
-`LINK` = **https://craebby.github.io/funk-adventskalender/** (seit 17.11.2026 online)
+Link: **https://craebby.github.io/funk-adventskalender/** (seit 17.11.2026 online). Er steht in jedem Text schon drin.
 
 Faustregel beim Posten: Neugier wecken, nichts verraten. Die einzelnen Türchen nicht aufzählen, nur die
 Richtung zeigen. Wer mehr wissen will, klickt.
@@ -24,7 +24,7 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > Materialliste ist dabei. Wer nicht suchen mag: fertige Sets für zusammen rund 40 €, und alle Teile kann man
 > danach weiter verwenden.
 >
-> 👉 LINK
+> 👉 https://craebby.github.io/funk-adventskalender/
 >
 > #Amateurfunk #HamRadio #Arduino #Adventskalender #Maker #MINT
 
@@ -57,7 +57,7 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > eine kleine **Funkamateur-Ecke**, und wer danach Feuer gefangen hat, findet am Ende den Weg zur
 > Einsteigerlizenz N.
 >
-> 👉 **LINK**
+> 👉 https://craebby.github.io/funk-adventskalender/
 >
 > Tipp: Mit dem Spoiler-Schalter lässt sich alles vorab ansehen, falls ihr die Teile verpacken und
 > verschenken wollt. Wer sich überraschen lassen will, schaut nicht ins GitHub-Repo, dort liegt alles offen.
@@ -69,7 +69,7 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 > **📡 Funk-Adventskalender: Nachwuchs-Futter für den Dezember**
 >
 > Wie bringt man Kinder, Jugendliche und Neugierige zum Funk, ohne mit Formeln und Prüfungsfragen
-> anzufangen? Mit Experimenten, die man hören kann. Unter LINK gibt es einen kostenlosen Adventskalender mit
+> anzufangen? Mit Experimenten, die man hören kann. Unter https://craebby.github.io/funk-adventskalender/ gibt es einen kostenlosen Adventskalender mit
 > 24 Steckbrett-Experimenten auf Arduino-Basis: ohne Löten, ohne Vorwissen, mit 5 V aus dem USB.
 >
 > Die Teilnehmer machen Störfelder hörbar, bauen einen Blitz- bzw. Knacks-Detektor, eine Viertelwellen-Antenne
@@ -85,7 +85,7 @@ Richtung zeigen. Wer mehr wissen will, klickt.
 ## Ein Satz für Leute ohne Bastelerfahrung
 
 > Stell dir einen Adventskalender vor, der dir jeden Tag eine neue Superkraft gibt: Erst hörst du Strom,
-> dann Funken, dann Funk, und an Heiligabend schaltest du den Weihnachtsbaum aus dem Nebenzimmer. LINK
+> dann Funken, dann Funk, und an Heiligabend schaltest du den Weihnachtsbaum aus dem Nebenzimmer. https://craebby.github.io/funk-adventskalender/
 
 ## Wo posten?
 
@@ -110,3 +110,73 @@ Nach dem Fotografieren mit den Kits:
 - Screenshot vom Kalender auf dem Handy mit geschlossenen Türchen
 - ein Steckbild aus der ersten Woche (`bilder/tag03.svg`), das verrät nichts vom Funk
 - kurzes Video: Kerzen gehen per Fernbedienung an (ab Tag 20)
+
+## Fertige Posts (Stand 21.11.2026)
+
+Der Link zeigt jetzt in Messengern und sozialen Netzen ein Vorschaubild (`werbung/bilder/vorschau.jpg`).
+Wo man Bilder anhängen kann: `werbung/bilder/aufbau_nano.jpg`.
+
+### Mastodon
+
+> 📡🎄 Funk-Adventskalender: 24 Türchen, 24 Experimente mit #Arduino auf dem Steckbrett. Ohne Löten, kostenlos.
+>
+> Netzbrummen sichtbar machen, Funken im Lichtschalter hören, morsen, die Funk-Thermometer der Nachbarn
+> mitlesen, der Atomuhr lauschen. An Heiligabend steuerst du den Weihnachtsbaum per 433 MHz.
+>
+> Mit KI entwickelt, jeder Tag am echten Steckbrett nachgebaut. Teile jetzt besorgen, am 1.12. geht's los.
+>
+> https://craebby.github.io/funk-adventskalender/
+>
+> #Amateurfunk #HamRadio #Maker #Adventskalender #MINT
+
+### Facebook: Arduino Deutschland (mit Foto `aufbau_nano.jpg`)
+
+> Moin zusammen! 🎄
+>
+> Ich habe für dieses Jahr einen kostenlosen **Funk-Adventskalender** gebaut: 24 Türchen, 24 kleine Experimente
+> mit Arduino auf dem Steckbrett, ohne Löten, jeden Tag 15 bis 30 Minuten.
+>
+> Es geht um alles, was unsichtbar durch die Luft geht. Ein offener Analogeingang zeigt im Seriellen Plotter das
+> Netzbrummen, der Arduino hört die Funken im Lichtschalter, übersetzt Morsezeichen live und liest ohne
+> Bibliothek die 433-MHz-Funk-Thermometer aus der Nachbarschaft mit. In der letzten Woche kommt die Atomuhr
+> DCF77 dazu, und an Heiligabend schaltet eine selbst gebaute Funkfernbedienung den Weihnachtsbaum.
+>
+> **Was man braucht:** einen Uno, ab Tag 18 einen Nano (oder zweiten Uno), Steckbrett, ein paar LEDs und
+> Widerstände, Taster, Fotowiderstand, Poti, passiven Summer, HC-SR04 und ein 433-MHz-Set. Eine Materialliste
+> liegt bei, vieles ist sicher schon in der Bastelkiste. Wer alles kaufen muss, kommt auf rund 40 €.
+>
+> Ehrlicherweise: Entwickelt habe ich den Kalender mit einer KI. Danach habe ich jeden Tag selbst nachgebaut und
+> korrigiert, was in der Praxis nicht funktionierte. Fotos eurer Aufbauten und Fehlermeldungen sind sehr
+> willkommen!
+>
+> 👉 https://craebby.github.io/funk-adventskalender/
+
+### mikrocontroller.net, Forum „Projekte & Code“
+
+**Titel:** Funk-Adventskalender für Einsteiger: 24 Arduino-Experimente (433 MHz, Netzbrummen, DCF77)
+
+> Hallo zusammen,
+>
+> ich möchte ein Projekt für Einsteiger vorstellen: einen kostenlosen Adventskalender mit 24 Experimenten rund um
+> Funk und unsichtbare Signale, gebaut mit Arduino Uno und Nano auf dem Steckbrett, ohne Löten. Zielgruppe sind
+> Neugierige ab etwa 10 Jahren, Familien und Jugendgruppen.
+>
+> https://craebby.github.io/funk-adventskalender/
+> Quellcode (MIT): https://github.com/craebby/funk-adventskalender
+>
+> **Inhalt grob:** LEDs, Summer und Lichtsensor in Woche 1; offener ADC-Eingang als Brumm- und
+> Knacks-Detektor, HC-SR04, Morse-Übersetzer in Woche 2; 433-MHz-OOK mit Viertelwellen-Antenne, eigene
+> Fernbedienung mit rc-switch in Woche 3; Drift der Arduino-Uhr und DCF77 (WebSDR oder Modul) in Woche 4.
+>
+> **Technisch vielleicht interessant:** An Tag 17 liest der Arduino Funk-Thermometer im Nexus- und
+> inFactory-Format ohne Bibliothek mit. Der Decoder misst Pulse und Pausen per Interrupt auf beiden Flanken (PPM), filtert
+> Störpulse unter 250 µs, sucht das Telegramm per Fensterverschiebung im Puffer und prüft bei inFactory die
+> CRC-4. Nexus wird erst nach zwei gleichen Empfängen angezeigt. Abgeglichen habe ich gegen rtl_433. FSK-Sensoren
+> auf 868 MHz gehen mit dem einfachen OOK-Empfänger natürlich nicht.
+>
+> **Zur Entstehung, damit es keiner suchen muss:** Konzept, Sketches und Texte sind mit einer KI entstanden.
+> Ich habe danach jeden Tag am echten Steckbrett nachgebaut. Dabei musste einiges neu gemacht werden, zum Beispiel
+> brauchte der Thermometer-Decoder mehrere Anläufe mit echten Rohdaten, und der offene ADC-Eingang übersteuerte
+> mit langem Draht.
+>
+> Ich freue mich über Kritik, Fehlerberichte und Verbesserungsvorschläge, gern hier oder als Issue auf GitHub.
